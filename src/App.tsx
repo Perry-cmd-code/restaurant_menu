@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.chooseLanguage}>
+      <div className={styles.chooseLanguage} onClick={()=>{setFilter(undefined)}}>
         {language === Language.ita ? (
           <img
             src={ukIcon}
