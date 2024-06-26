@@ -112,7 +112,7 @@ function App() {
 
           {filter != undefined && filter == SectionType.pizzeria && (
            <div className={styles.wrapperPizze}>
-              <strong className={styles.subtitle}>Pizze bufala</strong>
+              <strong className={styles.subtitle}>Pizze con mozzarella di bufala</strong>
 
               {menuIta
                 .filter((el) => el.section === filter)
