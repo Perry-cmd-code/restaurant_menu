@@ -51,7 +51,7 @@ export const menuIta: MenuItem[] = [
     price: "€ 14,00",
   },
   {
-    nome: "Pollo alla piastra su crema di patate alla paprika",
+    nome: "Polpo alla piastra su crema di patate alla paprika",
     section: SectionType.antipastiMare,
     price: "€ 14,00",
   },
@@ -560,7 +560,7 @@ export const menuIta: MenuItem[] = [
     nome: "Pescatore",
     description: "Pomodoro e frutti di mare",
     section: SectionType.pizzeria,
-    subSection: SubSectionType.pizzeBufala,
+    subSection: SubSectionType.pizzeClassiche,
     price: "€ 16,00"
   },
 
@@ -628,7 +628,7 @@ export const menuIta: MenuItem[] = [
     price: "€ 3,00"
   },
   {
-    nome: "Messica cristalli di sale 50cl.",
+    nome: "Messina ai cristalli di sale 50cl.",
     section: SectionType.bibite,
     price: "€ 4,00"
   },
@@ -785,5 +785,4 @@ export const menuIta: MenuItem[] = [
     section: SectionType.bibite,
     price: "€ 60,00"
   },
-
 ];

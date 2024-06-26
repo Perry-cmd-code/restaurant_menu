@@ -21,10 +21,16 @@ $primary-gold: #d8b955;
   //   margin: 0;
   // }
 
+  .chooseLanguage{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 5px;
+  }
+
   .logo {
-    
-    height: 30%;
-    max-height: 30%;
+    height: 25%;
+    max-height: 25%;
     padding: 20px;
 
     display: flex;
