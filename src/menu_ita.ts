@@ -80,11 +80,11 @@ export const menuIta: MenuItem[] = [
     section: SectionType.antipastiMare,
     price: "€ 3,50",
   },
-  {
-    nome: "Gamberone rosso di Mazara del Vallo (1° scelta) 4pz.",
-    section: SectionType.antipastiMare,
-    price: "€ 20,00",
-  },
+  // {
+  //   nome: "Gamberone rosso di Mazara del Vallo (1° scelta) 4pz.",
+  //   section: SectionType.antipastiMare,
+  //   price: "€ 20,00",
+  // },
   {
     nome: "Scampone del Mediterraneo (1° scelta) 4pz.",
     section: SectionType.antipastiMare,
@@ -337,7 +337,7 @@ export const menuIta: MenuItem[] = [
   },   
   {
     nome: "Tonno",
-    description: "Pomodoro, fiordilatte campana, cipolla di tropena, tonno",
+    description: "Pomodoro, fiordilatte campana, cipolla di tropea, tonno",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
     price: "€ 9,00"
@@ -370,13 +370,13 @@ export const menuIta: MenuItem[] = [
     subSection: SubSectionType.pizzeClassiche,
     price: "€ 12,00"
   },  
-  {
-    nome: "Solito posto",
-    description: "Pomodoro, fiordilatte campana, melenzane a dadini, funghi freschi, salamino piccante, salsiccia, wurstel",
-    section: SectionType.pizzeria,
-    subSection: SubSectionType.pizzeClassiche,
-    price: "€ 11,00"
-  },
+  // {
+  //   nome: "Civoleva",
+  //   description: "Pomodoro, fiordilatte campana, melenzane a dadini, funghi freschi, salamino piccante, salsiccia, wurstel",
+  //   section: SectionType.pizzeria,
+  //   subSection: SubSectionType.pizzeClassiche,
+  //   price: "€ 11,00"
+  // },
   // {
   //   nome: "Pizza pollo",
   //   description: "Pomodoro, fiordilatte campana, pollo fritto a dadini, salsa BBQ",
@@ -474,7 +474,7 @@ export const menuIta: MenuItem[] = [
   // },
   {
     nome: "Bufalina",
-    description: "Mozzarella di bufala, pomodorini, prosciutto crudo di Parma, scagle di grana padana DOP",
+    description: "Mozzarella di bufala, pomodorini, prosciutto crudo di Parma, scaglie di grana padana DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
     price: "€ 11,00"
@@ -495,7 +495,7 @@ export const menuIta: MenuItem[] = [
   },
   {
     nome: "Ai porcini",
-    description: "Mozzarella di bufala, melenzale a dadini, funghi porcini, pomodoro, scaglie di grana pada DOP",
+    description: "Mozzarella di bufala, melenzane a dadini, funghi porcini, pomodoro, scaglie di grana pada DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
     price: "€ 11,00"
@@ -528,13 +528,13 @@ export const menuIta: MenuItem[] = [
     subSection: SubSectionType.pizzeBufala,
     price: "€ 10,00"
   },
-  {
-    nome: "Civoleva",
-    description: "Mozzarella di bufala, speck, noci, miele",
-    section: SectionType.pizzeria,
-    subSection: SubSectionType.pizzeBufala,
-    price: "€ 11,00"
-  },
+  // {
+  //   nome: "Civoleva",
+  //   description: "Mozzarella di bufala, speck, noci, miele",
+  //   section: SectionType.pizzeria,
+  //   subSection: SubSectionType.pizzeBufala,
+  //   price: "€ 11,00"
+  // },
   // {
   //   nome: "Pinsa",
   //   description: "Mozzarella di bufala, mortadella, pesto di pistacchio, stracciatella di bufala, granella di pistacchio",
@@ -571,17 +571,22 @@ export const menuIta: MenuItem[] = [
   price: "€ 2,00"
 },
 {
-    nome: "Coca cola 33cl.",
+    nome: "Coca cola in vetro 33cl.",
     section: SectionType.bibite,
     price: "€ 3,00"
   },
   {
-    nome: "Fanta 33cl.",
+    nome: "Coca cola in vetro 1,5lt.",
+    section: SectionType.bibite,
+    price: "€ 4,00"
+  },
+  {
+    nome: "Fanta in vetro 33cl.",
     section: SectionType.bibite,
     price: "€ 3,00"
   },
   {
-    nome: "Sprite 33cl.",
+    nome: "Sprite in vetro 33cl.",
     section: SectionType.bibite,
     price: "€ 2,50"
   },
@@ -664,7 +669,7 @@ export const menuIta: MenuItem[] = [
     price: "€ 22,00"
   },
   {
-    nome: "Charme frizzante",
+    nome: "Charme rosè",
     description: "Calice",
     section: SectionType.bibite,
     price: "€ 7,00"
@@ -735,12 +740,6 @@ export const menuIta: MenuItem[] = [
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     price: "€ 20,00"
-  },
-  {
-    nome: "Rapitalà",
-    description: "Calice",
-    section: SectionType.bibite,
-    price: "€ 6,00"
   },
 
  // SPUMANTI
