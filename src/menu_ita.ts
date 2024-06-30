@@ -218,7 +218,7 @@ export const menuIta: MenuItem[] = [
     price: "€ 6,00",
   },
   {
-    nome: "Patatine fritte porzione",
+    nome: "Porzione di patatine fritte",
     section: SectionType.antipastiClassici,
     price: "€ 3,00",
   },
@@ -283,13 +283,13 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Aragosta",
     section: SectionType.secondiPesce,
-    price: "€ 120,00/kg",
+    price: "€ 12,00/etto",
     allergens: [Allergeni.crostacei],
   },
   {
     nome: "Pescato locale del giorno (esposto in vetrina)",
     section: SectionType.secondiPesce,
-    price: "€ 65,00/kg",
+    price: "€ 7,00/etto",
     allergens: [Allergeni.pesce],
   },
 
@@ -297,14 +297,18 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Patate al forno",
     section: SectionType.contorni,
+    price: "€ 4,00"
   },
   {
     nome: "Verdure grigliate di stagione",
     section: SectionType.contorni,
+    price: "€ 5,00"
   },
   {
     nome: "Insalata estiva",
     section: SectionType.contorni,
+    price: "€ 5,00"
+
   },
 
   //PIZZE
@@ -452,7 +456,7 @@ export const menuIta: MenuItem[] = [
   },
   {
     nome: "Tonno",
-    description: "Pomodoro, fiordilatte campana, cipolla di tropea, tonno",
+    description: "Pomodoro, fiordilatte campana, cipolla rossa di Tropea, tonno",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
     price: "€ 9,00",
@@ -578,7 +582,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Principe",
     description:
-      "Pomodoro, mozzarella di bufala, funghi freschi, pomodorini, scaglie di granda padana DOP",
+      "Pomodoro, mozzarella di bufala, funghi freschi, pomodorini, scaglie di grana padana DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
     price: "€ 11,00",
@@ -623,7 +627,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Ai porcini",
     description:
-      "Mozzarella di bufala, melenzane a dadini, funghi porcini, pomodoro, scaglie di grana pada DOP",
+      "Mozzarella di bufala, melenzane a dadini, funghi porcini, pomodorini, scaglie di grana pada DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
     price: "€ 11,00",
@@ -706,9 +710,9 @@ export const menuIta: MenuItem[] = [
     price: "€ 3,00",
   },
   {
-    nome: "Coca cola in vetro 1,5lt.",
+    nome: "Coca cola in vetro 1lt.",
     section: SectionType.bibite,
-    price: "€ 4,00",
+    price: "€ 4,50",
   },
   {
     nome: "Fanta in vetro 33cl.",
@@ -723,7 +727,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Chinotto S. Pellegrino 33cl.",
     section: SectionType.bibite,
-    price: "€ 0,00",
+    price: "€ 2,50",
   },
 
   //BIRRE CLASSICHE
@@ -783,7 +787,7 @@ export const menuIta: MenuItem[] = [
   },
 
   {
-    nome: "Ceres 33cl.",
+    nome: "Ceres",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
     price: "€ 4,00",
@@ -791,14 +795,14 @@ export const menuIta: MenuItem[] = [
 
   //VINI BIANCHI
   {
-    nome: "Charme frizzante",
+    nome: "Charme bianco",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
     price: "€ 22,00",
   },
   {
-    nome: "Charme frizzante",
+    nome: "Charme bianco",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
@@ -862,14 +866,14 @@ export const menuIta: MenuItem[] = [
     price: "€ 5,00",
   },
   {
-    nome: "Maria Costanza bollicine",
+    nome: "Maria Costanza",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
     price: "€ 28,00",
   },
   {
-    nome: "Maria Costanza bollicine",
+    nome: "Maria Costanza",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
@@ -896,6 +900,13 @@ export const menuIta: MenuItem[] = [
     subSection: SubSectionType.viniBianchi,
     price: "€ 20,00",
   },
+  {
+    nome: "Principe di Corleone",
+    description: "Calice",
+    section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
+    price: "€ 6,00",
+  },
 
   // SPUMANTI
   {
@@ -911,19 +922,19 @@ export const menuIta: MenuItem[] = [
     price: "€ 45,00",
   },
   {
-    nome: "Ferrari Maximum Blanc",
+    nome: "Ferrari Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
     price: "€ 40,00",
   },
   {
-    nome: "Ferrari Maximum Rosè",
+    nome: "Ferrari Rosè",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
     price: "€ 50,00",
   },
   {
-    nome: "Bellavita Blanc",
+    nome: "Bellavista Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
     price: "€ 50,00",
@@ -931,19 +942,19 @@ export const menuIta: MenuItem[] = [
 
   // CHAMPAGNE
   {
-    nome: "Moët & Chandon Imperial Blanc",
+    nome: "Moët & Chandon",
     section: SectionType.bibite,
     subSection: SubSectionType.champagne,
     price: "€ 70,00",
   },
   {
-    nome: "Veuve Clicquot Blanc",
+    nome: "Veuve Clicquot",
     section: SectionType.bibite,
     subSection: SubSectionType.champagne,
     price: "€ 80,00",
   },
   {
-    nome: "Pommery Blanc",
+    nome: "Pommery",
     section: SectionType.bibite,
     subSection: SubSectionType.champagne,
     price: "€ 60,00",

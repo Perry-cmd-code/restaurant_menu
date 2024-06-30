@@ -169,7 +169,7 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 6,00",
   },
   {
-    nome: "French fries portion",
+    nome: "Portion of french fries",
     section: SectionTypeEn.antipastiClassici,
     price: "€ 3,00",
   },
@@ -242,13 +242,13 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Lobster",
     section: SectionTypeEn.secondiPesce,
-    price: "€ 120,00/kg",
+    price: "€ 12,00/hectogram",
     allergens: [AllergeniEn.crostacei],
   },
   {
     nome: "Local catch of the day (displayed in the window)",
     section: SectionTypeEn.secondiPesce,
-    price: "€ 65,00/kg",
+    price: "€ 7,00/hectogram",
     allergens: [AllergeniEn.pesce],
   },
 
@@ -256,14 +256,17 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Baked potatoes",
     section: SectionTypeEn.contorni,
+    price: "€ 4,00"
   },
   {
     nome: "Seasonal grilled vegetables",
     section: SectionTypeEn.contorni,
+    price: "€ 5,00"
   },
   {
     nome: "Summer salad",
     section: SectionTypeEn.contorni,
+    price: "€ 4,00"
   },
 
   //PIZZE
@@ -410,7 +413,7 @@ export const menuEnglish: MenuItem[] = [
   },
   {
     nome: "Tonno",
-    description: "Tomato, Fiordilatte from Campania, Tropea onions, tuna",
+    description: "Tomato, Fiordilatte from Campania, Tropea red onions, tuna",
     section: SectionTypeEn.pizzeria,
     subSection: SubSectionTypeEn.pizzeClassiche,
     price: "€ 9,00",
@@ -581,7 +584,7 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Ai porcini",
     description:
-      "Buffalo mozzarella, aubergines a dadini, mushrooms porcini, tomato, grana padana flakes DOP",
+      "Buffalo mozzarella, aubergines a dadini, mushrooms porcini, cherry tomatoes, grana padana flakes DOP",
     section: SectionTypeEn.pizzeria,
     subSection: SubSectionTypeEn.pizzeBufala,
     price: "€ 11,00",
@@ -664,9 +667,9 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 3,00",
   },
   {
-    nome: "Coca cola in glass bottle 1,5lt.",
+    nome: "Coca cola in glass bottle 1lt.",
     section: SectionTypeEn.bibite,
-    price: "€ 4,00",
+    price: "€ 4,50",
   },
   {
     nome: "Fanta in glass bottle 33cl.",
@@ -681,7 +684,7 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Chinotto S. Pellegrino 33cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 0,00",
+    price: "€ 2,50",
   },
 
   //BIRRE CLASSICHE
@@ -741,7 +744,7 @@ export const menuEnglish: MenuItem[] = [
   },
 
   {
-    nome: "Ceres 33cl.",
+    nome: "Ceres",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.birreClassiche,
     price: "€ 4,00",
@@ -749,14 +752,14 @@ export const menuEnglish: MenuItem[] = [
 
   //VINI BIANCHI
   {
-    nome: "Charme sparkling",
+    nome: "Charme blanc",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.viniBianchi,
     price: "€ 22,00",
   },
   {
-    nome: "Charme sparkling",
+    nome: "Charme blanc",
     description: "Glass",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.viniBianchi,
@@ -820,14 +823,14 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 5,00",
   },
   {
-    nome: "Maria Costanza bollicine",
+    nome: "Maria Costanza",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.viniBianchi,
     price: "€ 28,00",
   },
   {
-    nome: "Maria Costanza bollicine",
+    nome: "Maria Costanza",
     description: "Glass",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.viniBianchi,
@@ -854,6 +857,13 @@ export const menuEnglish: MenuItem[] = [
     subSection: SubSectionTypeEn.viniBianchi,
     price: "€ 20,00",
   },
+  {
+    nome: "Principe di Corleone",
+    description: "Glass",
+    section: SectionTypeEn.bibite,
+    subSection: SubSectionTypeEn.viniBianchi,
+    price: "€ 6,00",
+  },
 
   // SPUMANTI
   {
@@ -869,19 +879,19 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 45,00",
   },
   {
-    nome: "Ferrari Maximum Blanc",
+    nome: "Ferrari Blanc",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.spumanti,
     price: "€ 40,00",
   },
   {
-    nome: "Ferrari Maximum Rosè",
+    nome: "Ferrari Rosè",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.spumanti,
     price: "€ 50,00",
   },
   {
-    nome: "Bellavita Blanc",
+    nome: "Bellavista Blanc",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.spumanti,
     price: "€ 50,00",
@@ -889,19 +899,19 @@ export const menuEnglish: MenuItem[] = [
 
   // CHAMPAGNE
   {
-    nome: "Moët & Chandon Imperial Blanc",
+    nome: "Moët & Chandon",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.champagne,
     price: "€ 70,00",
   },
   {
-    nome: "Veuve Clicquot Blanc",
+    nome: "Veuve Clicquot",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.champagne,
     price: "€ 80,00",
   },
   {
-    nome: "Pommery Blanc",
+    nome: "Pommery",
     section: SectionTypeEn.bibite,
     subSection: SubSectionTypeEn.champagne,
     price: "€ 60,00",
