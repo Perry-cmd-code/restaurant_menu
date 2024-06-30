@@ -70,7 +70,7 @@ function App() {
               ))}
 
             {filter != undefined &&
-              filter != SectionType.pizzeria &&
+              filter != SectionType.pizzeria && filter != SectionType.bibite &&
               menuIta
                 .filter((el) => el.section === filter)
                 .map((menuItem) => {
@@ -89,35 +89,7 @@ function App() {
                   );
                 })}
 
-            {filter != undefined && filter == SectionType.pizzeria && (
-              <div className={styles.wrapperPizze}>
-                <strong className={styles.subtitle}>Antipasti</strong>
-
-                {menuIta
-                  .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === SubSectionType.antipasti
-                  )
-                  .map((menuItem) => {
-                    return (
-                      <div className={styles.singleItem}>
-                        <div className={styles.head}>
-                          <strong className={styles.nome}>
-                            {menuItem.nome}
-                          </strong>
-                          <strong className={styles.prezzo}>
-                            {menuItem.price}
-                          </strong>
-                        </div>
-                        <p className={styles.descrizione}>
-                          {menuItem.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-              </div>
-            )}
-
+          
             {filter != undefined && filter == SectionType.pizzeria && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>Pizze classiche</strong>
@@ -177,6 +149,157 @@ function App() {
                   })}
               </div>
             )}
+
+{filter != undefined && filter == SectionType.bibite && (
+              <div className={styles.wrapperPizze}>
+
+                {menuIta
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === undefined
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+             {filter != undefined && filter == SectionType.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Birre classiche
+                </strong>
+
+                {menuIta
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionType.birreClassiche
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionType.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Vini bianchi
+                </strong>
+
+                {menuIta
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionType.viniBianchi
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionType.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Spumanti
+                </strong>
+
+                {menuIta
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionType.spumanti
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionType.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Champagne
+                </strong>
+
+                {menuIta
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionType.champagne
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
           </div>
         </div>
       ) : (
@@ -208,6 +331,7 @@ function App() {
 
             {filter != undefined &&
               filter != SectionTypeEn.pizzeria &&
+              filter != SectionTypeEn.bibite &&
               menuEnglish
                 .filter((el) => el.section === filter)
                 .map((menuItem) => {
@@ -226,34 +350,7 @@ function App() {
                   );
                 })}
 
-            {filter != undefined && filter == SectionTypeEn.pizzeria && (
-              <div className={styles.wrapperPizze}>
-                <strong className={styles.subtitle}>Antipasti</strong>
-
-                {menuEnglish
-                  .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === SubSectionTypeEn.antipasti
-                  )
-                  .map((menuItem) => {
-                    return (
-                      <div className={styles.singleItem}>
-                        <div className={styles.head}>
-                          <strong className={styles.nome}>
-                            {menuItem.nome}
-                          </strong>
-                          <strong className={styles.prezzo}>
-                            {menuItem.price}
-                          </strong>
-                        </div>
-                        <p className={styles.descrizione}>
-                          {menuItem.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-              </div>
-            )}
+           
 
             {filter != undefined && filter == SectionTypeEn.pizzeria && (
               <div className={styles.wrapperPizze}>
@@ -295,6 +392,157 @@ function App() {
                   .filter((el) => el.section === filter)
                   .filter(
                     (item) => item.subSection === SubSectionTypeEn.pizzeBufala
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionTypeEn.bibite && (
+              <div className={styles.wrapperPizze}>
+
+                {menuEnglish
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === undefined
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+             {filter != undefined && filter == SectionTypeEn.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Birre classiche
+                </strong>
+
+                {menuEnglish
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionTypeEn.birreClassiche
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionTypeEn.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Vini bianchi
+                </strong>
+
+                {menuEnglish
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionTypeEn.viniBianchi
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionTypeEn.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Spumanti
+                </strong>
+
+                {menuEnglish
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionTypeEn.spumanti
+                  )
+                  .map((menuItem) => {
+                    return (
+                      <div className={styles.singleItem}>
+                        <div className={styles.head}>
+                          <strong className={styles.nome}>
+                            {menuItem.nome}
+                          </strong>
+                          <strong className={styles.prezzo}>
+                            {menuItem.price}
+                          </strong>
+                        </div>
+                        <p className={styles.descrizione}>
+                          {menuItem.description}
+                        </p>
+                      </div>
+                    );
+                  })}
+              </div>
+            )}
+
+{filter != undefined && filter == SectionTypeEn.bibite && (
+              <div className={styles.wrapperPizze}>
+                <strong className={styles.subtitle}>
+                  Champagne
+                </strong>
+
+                {menuEnglish
+                  .filter((el) => el.section === filter)
+                  .filter(
+                    (item) => item.subSection === SubSectionTypeEn.champagne
                   )
                   .map((menuItem) => {
                     return (

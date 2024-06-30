@@ -8,7 +8,8 @@ export interface MenuItem {
 
 export enum SectionType {
 // home = "Home",
-  antipastiMare = "Antipasti",
+  antipastiMare = "Antipasti di mare",
+  antipastiClassici = "Antipasti classici",
   primiPesce = "Primi piatti",
   secondiPesce = "Secondi piatti",
   contorni = "Contorni",
@@ -18,10 +19,15 @@ export enum SectionType {
   //amari = "Amari",
 }
 export enum SubSectionType {
-    antipasti = "Antipasti",
+    // antipasti = "Antipasti",
     pizzeClassiche = "Pizze classiche",
     pizzeCrema = "Pizze speciali con crema",
     pizzeBufala = "Pizze con Bufala DOP",
+
+    viniBianchi = "Vini bianchi",
+    birreClassiche = "Birre classiche",
+    spumanti = "Spumanti",
+    champagne = "Champagne",
   }
 
 export const menuIta: MenuItem[] = [
@@ -95,6 +101,32 @@ export const menuIta: MenuItem[] = [
     section: SectionType.antipastiMare,
     price: "€ 50,00",
   },
+
+  //ANTIPASTI CLASSICI
+    //ANTIPASTI
+    {
+      nome: "Bruschetta classica 6pz.",
+      section: SectionType.antipastiClassici,
+      description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+      price: "€ 5,00"
+    },
+    {
+      nome: "Pane pizza bruschetta",
+      section: SectionType.antipastiClassici,
+      description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+      price: "€ 9,00"
+    },
+    {
+      nome: "Antipasto Caldo",
+      section: SectionType.antipastiClassici,
+      description: "Patatine fritte, panelle, crocchè, anelli di cipolla, arancine carne, arancine burro, mozzarelline",
+      price: "€ 6,00"
+    },
+    {
+      nome: "Patatine fritte porzione",
+      section: SectionType.antipastiClassici,
+      price: "€ 3,00"
+    },
 
   //PRIMI PIATTI MARE
   {
@@ -172,34 +204,7 @@ export const menuIta: MenuItem[] = [
 
   //PIZZE
 
-  //ANTIPASTI
-  {
-    nome: "Bruschetta classica 6pz.",
-    section: SectionType.pizzeria,
-    subSection: SubSectionType.antipasti,
-    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 5,00"
-  },
-  {
-    nome: "Pane pizza bruschetta",
-    section: SectionType.pizzeria,
-    subSection: SubSectionType.antipasti,
-    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 9,00"
-  },
-  {
-    nome: "Antipasto Caldo",
-    section: SectionType.pizzeria,
-    subSection: SubSectionType.antipasti,
-    description: "Patatine fritte, panelle, crocchè, anelli di cipolla, arancine carne, arancine burro, mozzarelline",
-    price: "€ 6,00"
-  },
-  {
-    nome: "Patatine fritte porzione",
-    section: SectionType.pizzeria,
-    subSection: SubSectionType.antipasti,
-    price: "€ 3,00"
-  },
+
 
   //PIZZE CLASSICHE
   // {
@@ -600,52 +605,62 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Heineken 33cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 2,50"
   },
   {
     nome: "Heineken 66cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 4,00"
   },
   {
     nome: "Beck's 33cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 2,50"
   },
   {
     nome: "Beck's 66cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 4,00"
   },
   {
     nome: "Moretti  33cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 2,00"
   },
   {
     nome: "Moretti 66cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 3,00"
   },
   {
     nome: "Messina ai cristalli di sale 50cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 4,00"
   },
   {
     nome: "Tennent's 33cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 4,00"
   },
   {
     nome: "Corona 33cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 4,00"
   },
 
   {
     nome: "Ceres 33cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.birreClassiche,
     price: "€ 4,00"
   },
 
@@ -654,36 +669,42 @@ export const menuIta: MenuItem[] = [
     nome: "Charme frizzante",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 22,00"
   },
   {
     nome: "Charme frizzante",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 7,00"
   },
   {
     nome: "Charme rosè",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 22,00"
   },
   {
     nome: "Charme rosè",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 7,00"
   },
   {
     nome: "Angimbé Cusumano",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 20,00"
   },
   {
     nome: "Angimbé Cusumano",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 6,00"
   },
 
@@ -691,54 +712,63 @@ export const menuIta: MenuItem[] = [
     nome: "Bianco di Nera",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 20,00"
   },
   {
     nome: "Bianco di Nera",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 6,00"
   },
   {
     nome: "Grillo",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 18,00"
   },
   {
     nome: "Grillo",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 5,00"
   },
   {
     nome: "Maria Costanza bollicine",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 28,00"
   },
   {
     nome: "Maria Costanza bollicine",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 9,00"
   },
   {
     nome: "Rapitalà",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 18,00"
   },
   {
     nome: "Rapitalà",
     description: "Calice",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 6,00"
   },
   {
     nome: "Principe di Corleone",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
+    subSection: SubSectionType.viniBianchi,
     price: "€ 20,00"
   },
 
@@ -746,26 +776,31 @@ export const menuIta: MenuItem[] = [
  {
     nome: "Berlucchi 61 Blanc",
     section: SectionType.bibite,
+    subSection: SubSectionType.spumanti,
     price: "€ 35,00"
   },
   {
     nome: "Berlucchi 61 Rosè",
     section: SectionType.bibite,
+    subSection: SubSectionType.spumanti,
     price: "€ 45,00"
   },
   {
     nome: "Ferrari Maximum Blanc",
     section: SectionType.bibite,
+    subSection: SubSectionType.spumanti,
     price: "€ 40,00"
   },
   {
     nome: "Ferrari Maximum Rosè",
     section: SectionType.bibite,
+    subSection: SubSectionType.spumanti,
     price: "€ 50,00"
   },
   {
     nome: "Bellavita Blanc",
     section: SectionType.bibite,
+    subSection: SubSectionType.spumanti,
     price: "€ 50,00"
   },
 
@@ -773,16 +808,19 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Moët & Chandon Imperial Blanc",
     section: SectionType.bibite,
+    subSection: SubSectionType.champagne,
     price: "€ 70,00"
   },
   {
     nome: "Veuve Clicquot Blanc",
     section: SectionType.bibite,
+    subSection: SubSectionType.champagne,
     price: "€ 80,00"
   },
   {
     nome: "Pommery Blanc",
     section: SectionType.bibite,
+    subSection: SubSectionType.champagne,
     price: "€ 60,00"
   },
 ];

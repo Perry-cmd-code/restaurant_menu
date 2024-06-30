@@ -97,6 +97,7 @@ $primary-gold: #d8b955;
         border: 2px $secondary-blue solid;
         border-radius: 16px;
         text-align: center;
+        cursor: pointer;
 
         p {
           margin: 0;
@@ -104,6 +105,7 @@ $primary-gold: #d8b955;
       }
 
       .wrapperPizze{
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 15px;

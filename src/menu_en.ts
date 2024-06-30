@@ -8,7 +8,8 @@ export interface MenuItem {
   
   export enum SectionTypeEn {
   // home = "Home",
-    antipastiMare = "Starter",
+    antipastiMare = "Seafood starter",
+    antipastiClassici = "Classic starter",
     primiPesce = "First courses",
     secondiPesce = "Second courses",
     contorni = "Side dishes",
@@ -18,10 +19,15 @@ export interface MenuItem {
     //amari = "Amari",
   }
   export enum SubSectionTypeEn {
-      antipasti = "Start",
+      // antipasti = "Start",
       pizzeClassiche = "Classic pizzas",
       pizzeCrema = "Pizze speciali con crema",
       pizzeBufala = "Pizzas with buffalo mozzarella DOP",
+
+      viniBianchi = "White wines",
+    birreClassiche = "Classic beers",
+    spumanti = "Sparkling wines",
+    champagne = "Champagne",
     }
   
   export const menuEnglish: MenuItem[] = [
@@ -95,6 +101,31 @@ export interface MenuItem {
       section: SectionTypeEn.antipastiMare,
       price: "€ 50,00",
     },
+
+    //ANTIPASTI CLASSICI
+       {
+        nome: "Classic bruschetta 6pieces.",
+        section: SectionTypeEn.antipastiClassici,
+        description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
+        price: "€ 5,00"
+      },
+      {
+        nome: "Pane pizza bruschetta",
+        section: SectionTypeEn.antipastiClassici,
+        description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
+        price: "€ 9,00"
+      },
+      {
+        nome: "Antipasto Caldo",
+        section: SectionTypeEn.antipastiClassici,
+        description: "French fries, panelle, crocchè, onion rings, meat arancine, butter and ham arancine, fried mini mozzarella",
+        price: "€ 6,00"
+      },
+      {
+        nome: "French fries portion",
+        section: SectionTypeEn.antipastiClassici,
+        price: "€ 3,00"
+      },
   
     //PRIMI PIATTI MARE
     {
@@ -172,34 +203,7 @@ export interface MenuItem {
   
     //PIZZE
   
-    //ANTIPASTI
-    {
-      nome: "Classic bruschetta 6pieces.",
-      section: SectionTypeEn.pizzeria,
-      subSection: SubSectionTypeEn.antipasti,
-      description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-      price: "€ 5,00"
-    },
-    {
-      nome: "Pane pizza bruschetta",
-      section: SectionTypeEn.pizzeria,
-      subSection: SubSectionTypeEn.antipasti,
-      description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-      price: "€ 9,00"
-    },
-    {
-      nome: "Antipasto Caldo",
-      section: SectionTypeEn.pizzeria,
-      subSection: SubSectionTypeEn.antipasti,
-      description: "French fries, panelle, crocchè, onion rings, meat arancine, butter and ham arancine, fried mini mozzarella",
-      price: "€ 6,00"
-    },
-    {
-      nome: "French fries portion",
-      section: SectionTypeEn.pizzeria,
-      subSection: SubSectionTypeEn.antipasti,
-      price: "€ 3,00"
-    },
+ 
   
     //PIZZE CLASSICHE
     // {
@@ -600,52 +604,62 @@ export interface MenuItem {
     {
       nome: "Heineken 33cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 2,50"
     },
     {
       nome: "Heineken 66cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 4,00"
     },
     {
       nome: "Beck's 33cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 2,50"
     },
     {
       nome: "Beck's 66cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 4,00"
     },
     {
       nome: "Moretti  33cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 2,00"
     },
     {
       nome: "Moretti 66cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 3,00"
     },
     {
       nome: "Messina to salt crystals 50cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 4,00"
     },
     {
       nome: "Tennent's 33cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 4,00"
     },
     {
       nome: "Corona 33cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 4,00"
     },
   
     {
       nome: "Ceres 33cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.birreClassiche,
       price: "€ 4,00"
     },
   
@@ -654,36 +668,42 @@ export interface MenuItem {
       nome: "Charme sparkling",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 22,00"
     },
     {
       nome: "Charme sparkling",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 7,00"
     },
     {
       nome: "Charme rosè",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 22,00"
     },
     {
       nome: "Charme rosè",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 7,00"
     },
     {
       nome: "Angimbé Cusumano",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 20,00"
     },
     {
       nome: "Angimbé Cusumano",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 6,00"
     },
   
@@ -691,54 +711,63 @@ export interface MenuItem {
       nome: "Bianco di Nera",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 20,00"
     },
     {
       nome: "Bianco di Nera",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 6,00"
     },
     {
       nome: "Grillo",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 18,00"
     },
     {
       nome: "Grillo",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 5,00"
     },
     {
       nome: "Maria Costanza bollicine",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 28,00"
     },
     {
       nome: "Maria Costanza bollicine",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 9,00"
     },
     {
       nome: "Rapitalà",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 18,00"
     },
     {
       nome: "Rapitalà",
       description: "Glass",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 6,00"
     },
     {
       nome: "Principe di Corleone",
       description: "Bottle 75 cl.",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.viniBianchi,
       price: "€ 20,00"
     },
   
@@ -746,26 +775,31 @@ export interface MenuItem {
    {
       nome: "Berlucchi 61 Blanc",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.spumanti,
       price: "€ 35,00"
     },
     {
       nome: "Berlucchi 61 Rosè",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.spumanti,
       price: "€ 45,00"
     },
     {
       nome: "Ferrari Maximum Blanc",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.spumanti,
       price: "€ 40,00"
     },
     {
       nome: "Ferrari Maximum Rosè",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.spumanti,
       price: "€ 50,00"
     },
     {
       nome: "Bellavita Blanc",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.spumanti,
       price: "€ 50,00"
     },
   
@@ -773,16 +807,19 @@ export interface MenuItem {
     {
       nome: "Moët & Chandon Imperial Blanc",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.champagne,
       price: "€ 70,00"
     },
     {
       nome: "Veuve Clicquot Blanc",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.champagne,
       price: "€ 80,00"
     },
     {
       nome: "Pommery Blanc",
       section: SectionTypeEn.bibite,
+      subSection: SubSectionTypeEn.champagne,
       price: "€ 60,00"
     },
   ];
