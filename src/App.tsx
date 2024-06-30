@@ -300,6 +300,12 @@ function App() {
                   })}
               </div>
             )}
+
+{filter != undefined && filter == SectionType.allergeni && (
+              <div className={styles.allergeni}>
+                <p>Allergeni</p>
+              </div>
+            )}
           </div>
         </div>
       ) : (
@@ -443,7 +449,7 @@ function App() {
              {filter != undefined && filter == SectionTypeEn.bibite && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Birre classiche
+                  Classic beers
                 </strong>
 
                 {menuEnglish
@@ -474,7 +480,7 @@ function App() {
 {filter != undefined && filter == SectionTypeEn.bibite && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Vini bianchi
+                  White wines
                 </strong>
 
                 {menuEnglish
@@ -505,7 +511,7 @@ function App() {
 {filter != undefined && filter == SectionTypeEn.bibite && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Spumanti
+                  Sparkling wines
                 </strong>
 
                 {menuEnglish

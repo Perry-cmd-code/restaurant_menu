@@ -1,168 +1,229 @@
+
 export interface MenuItem {
   nome: string;
-  description?:string;
+  description?: string;
   section: SectionType;
   subSection?: SubSectionType;
   price?: string;
+  allergens?: Allergeni[];
 }
 
 export enum SectionType {
-// home = "Home",
+  // home = "Home",
   antipastiMare = "Antipasti di mare",
   antipastiClassici = "Antipasti classici",
   primiPesce = "Primi piatti",
   secondiPesce = "Secondi piatti",
   contorni = "Contorni",
   pizzeria = "Pizzeria",
-  //dessert = "Dessert",
   bibite = "Bibite",
-  //amari = "Amari",
+  allergeni = "Allergeni",
 }
 export enum SubSectionType {
-    // antipasti = "Antipasti",
-    pizzeClassiche = "Pizze classiche",
-    pizzeCrema = "Pizze speciali con crema",
-    pizzeBufala = "Pizze con Bufala DOP",
+  // antipasti = "Antipasti",
+  pizzeClassiche = "Pizze classiche",
+  pizzeCrema = "Pizze speciali con crema",
+  pizzeBufala = "Pizze con Bufala DOP",
 
-    viniBianchi = "Vini bianchi",
-    birreClassiche = "Birre classiche",
-    spumanti = "Spumanti",
-    champagne = "Champagne",
-  }
+  viniBianchi = "Vini bianchi",
+  birreClassiche = "Birre classiche",
+  spumanti = "Spumanti",
+  champagne = "Champagne",
+}
+
+export enum Allergeni {
+  // 1
+  glutine = "Glutine",
+  // 2
+  crostacei = "Crostacei",
+  // 3
+  uova = "Uova e derivati",
+  // 4
+  pesce = "Pesce",
+  // 5
+  arachidi = "Arachidi e derivati",
+  // 6
+  soia = "Soia",
+  // 7
+  latte = "Latte e derivati",
+  // 8
+  fruttaGuscio = "Frutta a Guscio",
+  // 9
+  sedano = "Sedano",
+  // 10
+  senape = "Senape",
+  // 11
+  sesamo = "Sesamo",
+  // 12
+  anidride = "Anidride solforosa e solfiti",
+  // 13
+  lupini = "Lupini",
+  // 14
+  molluschi = "Molluschi",
+}
 
 export const menuIta: MenuItem[] = [
   {
     nome: "Bon bon di baccalà in pastella",
     section: SectionType.antipastiMare,
     price: "€ 10,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi]
   },
   {
     nome: "Zuppa di cozze",
     section: SectionType.antipastiMare,
     price: "€ 10,00",
+    allergens: [Allergeni.molluschi]
   },
   {
     nome: "Soutè di molluschi",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
+    allergens: [Allergeni.molluschi]
   },
   {
     nome: "Cocktail di gambero",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
+    allergens: [Allergeni.crostacei, Allergeni.senape]
+
   },
   {
     nome: "Insalata di mare",
     section: SectionType.antipastiMare,
     price: "€ 14,00",
+    allergens: [Allergeni.crostacei, Allergeni.molluschi]
   },
   {
     nome: "Polpo alla piastra su crema di patate alla paprika",
     section: SectionType.antipastiMare,
     price: "€ 14,00",
+    allergens: [Allergeni.latte, Allergeni.sedano, Allergeni.molluschi]
   },
   {
     nome: "Tris di tartara gambero rosa, salmone e ricciola",
     section: SectionType.antipastiMare,
     price: "€ 25,00",
+    allergens: [Allergeni.crostacei, Allergeni.pesce]
+
   },
   {
     nome: "Gamberone di Mazara del Vallo in tempura",
     section: SectionType.antipastiMare,
     price: "€ 16,00",
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.uova]
+
   },
   {
     nome: "Gamberone rosso marinato 5pz.",
     section: SectionType.antipastiMare,
     price: "€ 16,00",
+    allergens: [Allergeni.crostacei]
   },
   {
     nome: "Bruschetta ai ricci 5pz.",
     section: SectionType.antipastiMare,
     price: "€ 20,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi]
   },
   {
     nome: "Ostrica al pz.",
     section: SectionType.antipastiMare,
     price: "€ 3,50",
+    allergens: [ Allergeni.molluschi]
+
   },
   // {
   //   nome: "Gamberone rosso di Mazara del Vallo (1° scelta) 4pz.",
   //   section: SectionType.antipastiMare,
   //   price: "€ 20,00",
+  // allergens: [Allergeni.crostacei]
   // },
   {
     nome: "Scampone del Mediterraneo (1° scelta) 4pz.",
     section: SectionType.antipastiMare,
     price: "€ 20,00",
+    allergens: [Allergeni.crostacei]
   },
   {
     nome: "Cruditè x2",
     section: SectionType.antipastiMare,
     price: "€ 50,00",
+    allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi]
+
   },
 
   //ANTIPASTI CLASSICI
-    //ANTIPASTI
-    {
-      nome: "Bruschetta classica 6pz.",
-      section: SectionType.antipastiClassici,
-      description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-      price: "€ 5,00"
-    },
-    {
-      nome: "Pane pizza bruschetta",
-      section: SectionType.antipastiClassici,
-      description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-      price: "€ 9,00"
-    },
-    {
-      nome: "Antipasto Caldo",
-      section: SectionType.antipastiClassici,
-      description: "Patatine fritte, panelle, crocchè, anelli di cipolla, arancine carne, arancine burro, mozzarelline",
-      price: "€ 6,00"
-    },
-    {
-      nome: "Patatine fritte porzione",
-      section: SectionType.antipastiClassici,
-      price: "€ 3,00"
-    },
+  {
+    nome: "Bruschetta classica 6pz.",
+    section: SectionType.antipastiClassici,
+    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+    price: "€ 5,00",
+  },
+  {
+    nome: "Pane pizza bruschetta",
+    section: SectionType.antipastiClassici,
+    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+    price: "€ 9,00",
+  },
+  {
+    nome: "Antipasto Caldo",
+    section: SectionType.antipastiClassici,
+    description:
+      "Patatine fritte, panelle, crocchè, anelli di cipolla, arancine carne, arancine burro, mozzarelline",
+    price: "€ 6,00",
+  },
+  {
+    nome: "Patatine fritte porzione",
+    section: SectionType.antipastiClassici,
+    price: "€ 3,00",
+  },
 
   //PRIMI PIATTI MARE
   {
     nome: "Spaghetti vongole veraci",
     section: SectionType.primiPesce,
     price: "€ 14,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi]
   },
   {
     nome: "Linguine al nero di seppia",
     section: SectionType.primiPesce,
     price: "€ 15,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi]
   },
   {
     nome: "Linguine al nero di seppia, ricci e gamberi",
     section: SectionType.primiPesce,
     price: "€ 20,00",
+    allergens: [Allergeni.glutine,Allergeni.crostacei, Allergeni.molluschi]
+
   },
   {
     nome: "Linguine all'astice",
     section: SectionType.primiPesce,
     price: "€ 22,00",
+    allergens: [Allergeni.glutine,Allergeni.crostacei]
   },
   {
     nome: "Spaghettone ai ricci",
     section: SectionType.primiPesce,
     price: "€ 20,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi]
   },
   {
     nome: "Paccheri gambero rosso, scampi e pesto di pistacchio",
     section: SectionType.primiPesce,
     price: "€ 18,00",
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.fruttaGuscio]
+
   },
   {
     nome: "Risotto ai frutti di mare",
     section: SectionType.primiPesce,
     price: "€ 14,00",
+    allergens: [ Allergeni.crostacei,Allergeni.uova,  Allergeni.molluschi]
+
   },
 
   //SECONDI DI PESCE
@@ -170,23 +231,26 @@ export const menuIta: MenuItem[] = [
     nome: "Gamberone rosso di Mazara del Vallo 4pz.",
     section: SectionType.secondiPesce,
     price: "€ 20,00",
+    allergens: [Allergeni.crostacei]
   },
   {
     nome: "Scamponi del Mar Mediterraneo (1° scelta) 4pz.",
     section: SectionType.secondiPesce,
     price: "€ 20,00",
+    allergens: [Allergeni.crostacei]
   },
   {
     nome: "Aragosta",
     section: SectionType.secondiPesce,
     price: "€ 120,00/kg",
+    allergens: [Allergeni.crostacei]
   },
   {
     nome: "Pescato locale del giorno (esposto in vetrina)",
     section: SectionType.secondiPesce,
     price: "€ 65,00/kg",
+    allergens: [Allergeni.pesce]
   },
-
 
   //CONTORNI
   {
@@ -204,8 +268,6 @@ export const menuIta: MenuItem[] = [
 
   //PIZZE
 
-
-
   //PIZZE CLASSICHE
   // {
   //   nome: "Pane pizza aromatizzato",
@@ -219,91 +281,97 @@ export const menuIta: MenuItem[] = [
     description: "Fiordilatte campana, origano",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 6,00"
+    price: "€ 6,00",
   },
   {
     nome: "Margherita",
     description: "Pomodoro, fiordilatte campana, basilico, origano",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 6,00"
-  },  
+    price: "€ 6,00",
+  },
   {
     nome: "Napoli",
     description: "Pomodoro, fiordilatte campana, acciughe, basilico, origano",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 7,00"
+    price: "€ 7,00",
   },
   {
     nome: "Romana",
-    description: "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti), origano",
+    description:
+      "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti), origano",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
-  }, 
+    price: "€ 8,00",
+  },
   {
     nome: "4 Gusti",
-    description: "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti), carciofi, origano",
+    description:
+      "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti), carciofi, origano",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  }, 
+    price: "€ 9,00",
+  },
   {
     nome: "Calzone",
-    description: "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti)",
+    description:
+      "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti)",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
-  },  
+    price: "€ 8,00",
+  },
   {
     nome: "Diavola",
     description: "Pomodoro, fiordilatte campana, cipolla e salamino piccante",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
+    price: "€ 8,00",
   },
   {
     nome: "Topolino",
     description: "Pomodoro, fiordilatte campana, patatine fritte, wurstel",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
-  }, 
+    price: "€ 8,00",
+  },
   {
     nome: "Capricciosa",
-    description: "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti), funghi freschi, carciofi, olive, wurstel",
+    description:
+      "Pomodoro, fiordilatte campana, prosciutto cotto (senza conservanti), funghi freschi, carciofi, olive, wurstel",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  },  
+    price: "€ 9,00",
+  },
   {
     nome: "Parmigiana",
-    description: "Pomodoro, fiordilatte campana, melenzane a fette, pomodoro fresco, grana padana DOP grattugiata",
+    description:
+      "Pomodoro, fiordilatte campana, melenzane a fette, pomodoro fresco, grana padana DOP grattugiata",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  }, 
+    price: "€ 9,00",
+  },
   // {
   //   nome: "Boscaiola",
   //   description: "Pomodoro, fiordilatte campana, melenzane, funghi freschi e pomodoro a fette",
   //   section: SectionType.pizzeria,
   //   subSection: SubSectionType.pizzeClassiche,
   //   price: "€ 9,00"
-  // }, 
+  // },
   {
     nome: "Vegetariana",
-    description: "Pomodoro, funghi freschi, pomodoro a fette, melenzane arrostite, zucchine arrostite, spinaci*",
+    description:
+      "Pomodoro, funghi freschi, pomodoro a fette, melenzane arrostite, zucchine arrostite, spinaci*",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  }, 
+    price: "€ 9,00",
+  },
   {
     nome: "Marinara",
     description: "Pomodoro, acciughe, olio d'aglio, olive calabresi",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
+    price: "€ 8,00",
   },
   // {
   //   nome: "Calabrese",
@@ -311,70 +379,74 @@ export const menuIta: MenuItem[] = [
   //   section: SectionType.pizzeria,
   //   subSection: SubSectionType.pizzeClassiche,
   //   price: "€ 9,00"
-  // }, 
+  // },
   {
     nome: "Pizza sfincione",
     description: "Salsa di sfincione, acciughe, prangrattato, origano",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
-  },   
+    price: "€ 8,00",
+  },
   // {
   //   nome: "Faccia da vecchia",
   //   description: "Pomodoro, pomodoro a fette, acciughe, cipolla, pangrattato, cacio cavallo",
   //   section: SectionType.pizzeria,
   //   subSection: SubSectionType.pizzeClassiche,
   //   price: "€ 8,00"
-  // },   
+  // },
   // {
   //   nome: "Cavallino",
   //   description: "Pomodoro, fiordilatte campana, peperoni, salsiccia, olive calabresi",
   //   section: SectionType.pizzeria,
   //   subSection: SubSectionType.pizzeClassiche,
   //   price: "€ 9,00"
-  // },    
+  // },
   {
     nome: "Sicilianella",
-    description: "Pomodoro, fiordilatte campana, melenzane a dadini, salamino piccante, acciughe, cipolla, pangrattato, cacio cavallo",
+    description:
+      "Pomodoro, fiordilatte campana, melenzane a dadini, salamino piccante, acciughe, cipolla, pangrattato, cacio cavallo",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  },   
+    price: "€ 9,00",
+  },
   {
     nome: "Tonno",
     description: "Pomodoro, fiordilatte campana, cipolla di tropea, tonno",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  },  
+    price: "€ 9,00",
+  },
   {
     nome: "4 Formaggi",
-    description: "Fiordilatte campana, emmental, gorgonzola, grana padana DOP grattugiata",
+    description:
+      "Fiordilatte campana, emmental, gorgonzola, grana padana DOP grattugiata",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
+    price: "€ 9,00",
   },
   {
     nome: "San Daniele",
-    description: "Pomodoro, fiordilatte campana, rucola, prosciutto crudo di Parma, grana a scaglie",
+    description:
+      "Pomodoro, fiordilatte campana, rucola, prosciutto crudo di Parma, grana a scaglie",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 10,00"
-  },  
+    price: "€ 10,00",
+  },
   {
     nome: "Girasole",
-    description: "Pomodoro, fiordilatte campana, funghi freschi, mascarpone, prosciutto crudo di Parma, grana a scaglie",
+    description:
+      "Pomodoro, fiordilatte campana, funghi freschi, mascarpone, prosciutto crudo di Parma, grana a scaglie",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 11,00"
-  },  
+    price: "€ 11,00",
+  },
   {
     nome: "Salmone",
     description: "Fiordilatte campana, salmone all'uscita e crema al salmone",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 12,00"
-  },  
+    price: "€ 12,00",
+  },
   // {
   //   nome: "Civoleva",
   //   description: "Pomodoro, fiordilatte campana, melenzane a dadini, funghi freschi, salamino piccante, salsiccia, wurstel",
@@ -388,80 +460,87 @@ export const menuIta: MenuItem[] = [
   //   section: SectionType.pizzeria,
   //   subSection: SubSectionType.pizzeClassiche,
   //   price: "€ 8,00"
-  // }, 
+  // },
   {
     nome: "Chicken chips",
-    description: "Pomodoro, fiordilatte campana, pollo fritto a dadini, patatine fritte*, salsa BBQ",
+    description:
+      "Pomodoro, fiordilatte campana, pollo fritto a dadini, patatine fritte*, salsa BBQ",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  },  
+    price: "€ 9,00",
+  },
   {
     nome: "Pizza kebab",
     description: "Fiordilatte campana, kebab di tacchino, salsa yogurt",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 9,00"
-  },  
+    price: "€ 9,00",
+  },
   {
     nome: "Schiacciata classica",
-    description: "Fiordilatte campana, prosciutto cotto (senza conservanti), pomodoro a fette, olio evo, origano, sale",
+    description:
+      "Fiordilatte campana, prosciutto cotto (senza conservanti), pomodoro a fette, olio evo, origano, sale",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 8,00"
-  }, 
+    price: "€ 8,00",
+  },
   // {
   //   nome: "Schiacciata campagnola",
   //   description: "Fiordilatte campana, melenzane a fette, prosciutto cotto (senza conservanti), cacio cavallo a scaglie",
   //   section: SectionType.pizzeria,
   //   subSection: SubSectionType.pizzeClassiche,
   //   price: "€ 8,00"
-  // },  
+  // },
 
- // PIZZE SPECIALI CON CREME
- {
+  // PIZZE SPECIALI CON CREME
+  {
     nome: "Radicchio",
-    description: "Crema di radicchio, fiordilatte campana, mascarpone, bresaola, scaglie di grana padana DOP",
+    description:
+      "Crema di radicchio, fiordilatte campana, mascarpone, bresaola, scaglie di grana padana DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeCrema,
-    price: "€ 10,00"
+    price: "€ 10,00",
   },
   {
     nome: "Spinaci",
-    description: "Crema di spinaci, fiordilatte campana, funghi freschi, grana padana DOP grattuggiata",
+    description:
+      "Crema di spinaci, fiordilatte campana, funghi freschi, grana padana DOP grattuggiata",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeCrema,
-    price: "€ 10,00"
+    price: "€ 10,00",
   },
   {
     nome: "Funghi",
-    description: "Crema di funghi, fiordilatte campana, pomodoro a fette, speck, noci",
+    description:
+      "Crema di funghi, fiordilatte campana, pomodoro a fette, speck, noci",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeCrema,
-    price: "€ 10,00"
+    price: "€ 10,00",
   },
   {
-  nome: "Elen",
-  description: "Crema di tonno e gamberi, pomodorini,philadelphia, mzozarella di bufala, gamberetti",
-  section: SectionType.pizzeria,
-  subSection: SubSectionType.pizzeCrema,
-  price: "€ 13,00"
-},
+    nome: "Elen",
+    description:
+      "Crema di tonno e gamberi, pomodorini,philadelphia, mzozarella di bufala, gamberetti",
+    section: SectionType.pizzeria,
+    subSection: SubSectionType.pizzeCrema,
+    price: "€ 13,00",
+  },
 
-//PIZZE CON BUFALA DOP
-{
+  //PIZZE CON BUFALA DOP
+  {
     nome: "Leggera",
     description: "Pomodoro, mozzarella di bufala, basilico, olio evo",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 8,00"
+    price: "€ 8,00",
   },
   {
     nome: "Principe",
-    description: "Pomodoro, mozzarella di bufala, funghi freschi, pomodorini, scaglie di granda padana DOP",
+    description:
+      "Pomodoro, mozzarella di bufala, funghi freschi, pomodorini, scaglie di granda padana DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 11,00"
+    price: "€ 11,00",
   },
   // {
   //   nome: "Francy",
@@ -479,10 +558,11 @@ export const menuIta: MenuItem[] = [
   // },
   {
     nome: "Bufalina",
-    description: "Mozzarella di bufala, pomodorini, prosciutto crudo di Parma, scaglie di grana padana DOP",
+    description:
+      "Mozzarella di bufala, pomodorini, prosciutto crudo di Parma, scaglie di grana padana DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 11,00"
+    price: "€ 11,00",
   },
   // {
   //   nome: "Innamorata",
@@ -493,31 +573,34 @@ export const menuIta: MenuItem[] = [
   // },
   {
     nome: "Delicata",
-    description: "Mozzarella di bufala, funghi porcini, pomodorini, bresaola, scaglie di grana padana DOP",
+    description:
+      "Mozzarella di bufala, funghi porcini, pomodorini, bresaola, scaglie di grana padana DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 12,00"
+    price: "€ 12,00",
   },
   {
     nome: "Ai porcini",
-    description: "Mozzarella di bufala, melenzane a dadini, funghi porcini, pomodoro, scaglie di grana pada DOP",
+    description:
+      "Mozzarella di bufala, melenzane a dadini, funghi porcini, pomodoro, scaglie di grana pada DOP",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 11,00"
+    price: "€ 11,00",
   },
   {
     nome: "Friarelli",
     description: "Mozzarella di bufala, friarielli napoletani, salsiccia",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 11,00"
+    price: "€ 11,00",
   },
   {
     nome: "Pistacchiosa",
-    description: "Fiordilatte campana, mortadella, stracciatella di bufala, pesto di pistacchio, boccone di bufala, granella di pistacchio",
+    description:
+      "Fiordilatte campana, mortadella, stracciatella di bufala, pesto di pistacchio, boccone di bufala, granella di pistacchio",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 13,00"
+    price: "€ 13,00",
   },
   // {
   //   nome: "Bronte",
@@ -531,7 +614,7 @@ export const menuIta: MenuItem[] = [
     description: "Mozzarella di bufala, mortadella e granella di pistacchio",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeBufala,
-    price: "€ 10,00"
+    price: "€ 10,00",
   },
   // {
   //   nome: "Civoleva",
@@ -548,57 +631,58 @@ export const menuIta: MenuItem[] = [
   //   price: "€ 13,00"
   // },
   {
-  nome: "Sfilatino",
-  description: "Mozzarella di bufala, prosciutto crudo di parma, pomodorini, stracciatella di bufala, straccetti di melenzane",
-  section: SectionType.pizzeria,
-  subSection: SubSectionType.pizzeBufala,
-  price: "€ 13,00"
-},
-// {
-//     nome: "Calzone speciale",
-//     description: "Mozzarella di bufala, gorgonzola, scamorza affumicata, ricotta, prosciutto crudo di parma, pesto di pistacchio",
-//     section: SectionType.pizzeria,
-//     subSection: SubSectionType.pizzeBufala,
-//     price: "€ 13,00"
-//   },
+    nome: "Sfilatino",
+    description:
+      "Mozzarella di bufala, prosciutto crudo di parma, pomodorini, stracciatella di bufala, straccetti di melenzane",
+    section: SectionType.pizzeria,
+    subSection: SubSectionType.pizzeBufala,
+    price: "€ 13,00",
+  },
+  // {
+  //     nome: "Calzone speciale",
+  //     description: "Mozzarella di bufala, gorgonzola, scamorza affumicata, ricotta, prosciutto crudo di parma, pesto di pistacchio",
+  //     section: SectionType.pizzeria,
+  //     subSection: SubSectionType.pizzeBufala,
+  //     price: "€ 13,00"
+  //   },
   {
     nome: "Pescatore",
     description: "Pomodoro e frutti di mare",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
-    price: "€ 16,00"
+    price: "€ 16,00",
   },
 
   //BIBITE
   {
-  nome: "Acqua 1 lt.",
-  section: SectionType.bibite,
-  price: "€ 2,00"
-},
-{
+    nome: "Acqua 1 lt.",
+    section: SectionType.bibite,
+    price: "€ 2,00",
+  },
+  {
     nome: "Coca cola in vetro 33cl.",
     section: SectionType.bibite,
-    price: "€ 3,00"
+    price: "€ 3,00",
   },
   {
     nome: "Coca cola in vetro 1,5lt.",
     section: SectionType.bibite,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
   {
     nome: "Fanta in vetro 33cl.",
     section: SectionType.bibite,
-    price: "€ 3,00"
+    price: "€ 3,00",
   },
   {
     nome: "Sprite in vetro 33cl.",
     section: SectionType.bibite,
-    price: "€ 2,50"
+    price: "€ 2,50",
   },
   {
     nome: "Chinotto S. Pellegrino 33cl.",
     section: SectionType.bibite,
-    price: "€ 0,00"
+    price: "€ 0,00",
   },
 
   //BIRRE CLASSICHE
@@ -606,62 +690,62 @@ export const menuIta: MenuItem[] = [
     nome: "Heineken 33cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 2,50"
+    price: "€ 2,50",
   },
   {
     nome: "Heineken 66cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
   {
     nome: "Beck's 33cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 2,50"
+    price: "€ 2,50",
   },
   {
     nome: "Beck's 66cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
   {
     nome: "Moretti  33cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 2,00"
+    price: "€ 2,00",
   },
   {
     nome: "Moretti 66cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 3,00"
+    price: "€ 3,00",
   },
   {
     nome: "Messina ai cristalli di sale 50cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
   {
     nome: "Tennent's 33cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
   {
     nome: "Corona 33cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
 
   {
     nome: "Ceres 33cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.birreClassiche,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
 
   //VINI BIANCHI
@@ -670,42 +754,42 @@ export const menuIta: MenuItem[] = [
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 22,00"
+    price: "€ 22,00",
   },
   {
     nome: "Charme frizzante",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 7,00"
+    price: "€ 7,00",
   },
   {
     nome: "Charme rosè",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 22,00"
+    price: "€ 22,00",
   },
   {
     nome: "Charme rosè",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 7,00"
+    price: "€ 7,00",
   },
   {
     nome: "Angimbé Cusumano",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 20,00"
+    price: "€ 20,00",
   },
   {
     nome: "Angimbé Cusumano",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 6,00"
+    price: "€ 6,00",
   },
 
   {
@@ -713,114 +797,114 @@ export const menuIta: MenuItem[] = [
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 20,00"
+    price: "€ 20,00",
   },
   {
     nome: "Bianco di Nera",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 6,00"
+    price: "€ 6,00",
   },
   {
     nome: "Grillo",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 18,00"
+    price: "€ 18,00",
   },
   {
     nome: "Grillo",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 5,00"
+    price: "€ 5,00",
   },
   {
     nome: "Maria Costanza bollicine",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 28,00"
+    price: "€ 28,00",
   },
   {
     nome: "Maria Costanza bollicine",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 9,00"
+    price: "€ 9,00",
   },
   {
     nome: "Rapitalà",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 18,00"
+    price: "€ 18,00",
   },
   {
     nome: "Rapitalà",
     description: "Calice",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 6,00"
+    price: "€ 6,00",
   },
   {
     nome: "Principe di Corleone",
     description: "Bottiglia 75 cl.",
     section: SectionType.bibite,
     subSection: SubSectionType.viniBianchi,
-    price: "€ 20,00"
+    price: "€ 20,00",
   },
 
- // SPUMANTI
- {
+  // SPUMANTI
+  {
     nome: "Berlucchi 61 Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
-    price: "€ 35,00"
+    price: "€ 35,00",
   },
   {
     nome: "Berlucchi 61 Rosè",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
-    price: "€ 45,00"
+    price: "€ 45,00",
   },
   {
     nome: "Ferrari Maximum Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
-    price: "€ 40,00"
+    price: "€ 40,00",
   },
   {
     nome: "Ferrari Maximum Rosè",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
-    price: "€ 50,00"
+    price: "€ 50,00",
   },
   {
     nome: "Bellavita Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.spumanti,
-    price: "€ 50,00"
+    price: "€ 50,00",
   },
 
- // CHAMPAGNE
+  // CHAMPAGNE
   {
     nome: "Moët & Chandon Imperial Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.champagne,
-    price: "€ 70,00"
+    price: "€ 70,00",
   },
   {
     nome: "Veuve Clicquot Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.champagne,
-    price: "€ 80,00"
+    price: "€ 80,00",
   },
   {
     nome: "Pommery Blanc",
     section: SectionType.bibite,
     subSection: SubSectionType.champagne,
-    price: "€ 60,00"
+    price: "€ 60,00",
   },
 ];
