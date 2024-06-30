@@ -515,7 +515,7 @@ export const menuEnglish: MenuItem[] = [
   //   price: "€ 8,00"
   // },
   {
-    nome: "Chicken chips",
+    nome: "Pizza pollo",
     description:
       "Tomato, fiordilatte from Campania, diced fried chicken, French fries*, BBQ sauce",
     section: SectionTypeEn.pizzeria,

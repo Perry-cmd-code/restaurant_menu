@@ -507,7 +507,7 @@ export const menuIta: MenuItem[] = [
   //   price: "€ 8,00"
   // },
   {
-    nome: "Chicken chips",
+    nome: "Pizza pollo",
     description:
       "Pomodoro, fiordilatte campana, pollo fritto a dadini, patatine fritte*, salsa BBQ",
     section: SectionType.pizzeria,
