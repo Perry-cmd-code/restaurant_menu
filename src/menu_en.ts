@@ -1,3 +1,18 @@
+import GlutineIcon from "../src/assets/allergens/glutine.svg";
+import AnidriteIcon from "../src/assets/allergens/anidrite.svg";
+import ArachidiIcon from "../src/assets/allergens/arachidi.svg";
+import CrostaceiIcon from "../src/assets/allergens/crostacei.svg";
+import FruttaAGuscioIcon from "../src/assets/allergens/fruttaAGuscio.svg";
+import LatteIcon from "../src/assets/allergens/latte.svg";
+import LupiniIcon from "../src/assets/allergens/lupini.svg";
+import MolluschiIcon from "../src/assets/allergens/molluschi.svg";
+import PesceIcon from "../src/assets/allergens/pesce.svg";
+import SedanoIcon from "../src/assets/allergens/sedano.svg";
+import SenapeIcon from "../src/assets/allergens/senape.svg";
+import SesamoIcon from "../src/assets/allergens/sesamo.svg";
+import SoiaIcon from "../src/assets/allergens/soia.svg";
+import UovaIcon from "../src/assets/allergens/uova.svg";
+
 export interface MenuItem {
   nome: string;
   description?: string;
@@ -58,6 +73,42 @@ export enum AllergeniEn {
   // 14
   molluschi = "Molluscs",
 }
+
+export function allergeneToSvgEn(allergene: AllergeniEn) : string | undefined {
+  switch (allergene) {
+    case AllergeniEn.glutine:
+      return GlutineIcon;
+    case AllergeniEn.anidride:
+      return AnidriteIcon;
+    case AllergeniEn.crostacei:
+      return CrostaceiIcon;
+    case AllergeniEn.arachidi:
+      return ArachidiIcon;
+    case AllergeniEn.fruttaGuscio:
+      return FruttaAGuscioIcon;
+    case AllergeniEn.latte:
+      return LatteIcon;
+    case AllergeniEn.lupini:
+      return LupiniIcon;
+    case AllergeniEn.molluschi:
+      return MolluschiIcon;
+    case AllergeniEn.pesce:
+      return PesceIcon;
+    case AllergeniEn.sedano:
+      return SedanoIcon;
+    case AllergeniEn.senape:
+      return SenapeIcon;
+    case AllergeniEn.sesamo:
+      return SesamoIcon;
+    case AllergeniEn.soia:
+      return SoiaIcon;
+    case AllergeniEn.uova:
+      return UovaIcon;
+    default:
+      break;
+  }
+}
+
 
 export const menuEnglish: MenuItem[] = [
   {

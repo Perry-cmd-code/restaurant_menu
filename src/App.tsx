@@ -6,7 +6,7 @@ import arrowBack from "./arrowBack.svg";
 
 import styles from "./app.module.scss";
 import { Allergeni, SectionType, SubSectionType, allergeneToPng, menuIta } from "./menu_ita";
-import { SectionTypeEn, SubSectionTypeEn, menuEnglish } from "./menu_en";
+import { AllergeniEn, SectionTypeEn, SubSectionTypeEn, allergeneToSvgEn, menuEnglish } from "./menu_en";
 
 enum Language {
   ita,
@@ -361,6 +361,9 @@ function App() {
                       <p className={styles.descrizione}>
                         {menuItem.description}
                       </p>
+                      <div className={styles.allergeni}>
+                        {menuItem.allergens?.map((el)=> <img src={allergeneToSvgEn(el)}/>)}
+                    </div>
                     </div>
                   );
                 })}
@@ -578,9 +581,18 @@ function App() {
                   })}
               </div>
             )}
+            {filter != undefined && filter == SectionTypeEn.allergeni && (
+              <div className={styles.allergeni}>
+                {Object.values(AllergeniEn).map((allergene)=><p className={styles.singleAllergene}>
+                <img src={allergeneToSvgEn(allergene)}/>
+                  {allergene} 
+                  </p>)}
+              </div>
+            )}
           </div>
         </div>
       )}
+      
     </div>
   );
 }
