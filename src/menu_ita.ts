@@ -17,6 +17,7 @@ export enum SectionType {
   contorni = "Contorni",
   pizzeria = "Pizzeria",
   bibite = "Bibite",
+  cocktail = "Cocktail",
   allergeni = "Allergeni",
 }
 export enum SubSectionType {
@@ -907,4 +908,66 @@ export const menuIta: MenuItem[] = [
     subSection: SubSectionType.champagne,
     price: "€ 60,00",
   },
+
+
+  // COCKTAIL
+  {
+    nome: "Negroni",
+    section: SectionType.cocktail,
+    description: "Gin, Campari, Vermouth rosso",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Margarita",
+    section: SectionType.cocktail,
+    description: "Tequila, triple sec, lime",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Mojito",
+    section: SectionType.cocktail,
+    description: "Rum, lime, foglie di menta, zucchero di canna, soda",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Sex on the beach",
+    section: SectionType.cocktail,
+    description: "Vodka, peach three, succo d'arancia, succo di mirtillo",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Aperol spritz",
+    section: SectionType.cocktail,
+    description: "Aperol, prosecco, soda",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Montenegro",
+    section: SectionType.cocktail,
+    description: "Amaro Montenegro, red bull",
+    price: "€ 6,00",
+  },
+  {
+    nome: "Vodka e red bull",
+    section: SectionType.cocktail,
+    price: "€ 6,00",
+  },
+  {
+    nome: "Moscow mule",
+    section: SectionType.cocktail,
+    description: "Vodka, ginger beer, succo di limone",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Malibù",
+    section: SectionType.cocktail,
+    description: "Succo d'ananas, malibù, sciroppo alla fragola",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Gin tonic/lemon",
+    section: SectionType.cocktail,
+    price: "€ 6,00",
+  },
+
 ];
