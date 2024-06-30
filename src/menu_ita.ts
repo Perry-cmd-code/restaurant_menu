@@ -1,3 +1,17 @@
+import GlutineIcon from "../src/assets/allergens/glutine.svg";
+import AnidriteIcon from "../src/assets/allergens/anidrite.svg";
+import ArachidiIcon from "../src/assets/allergens/arachidi.svg";
+import CrostaceiIcon from "../src/assets/allergens/crostacei.svg";
+import FruttaAGuscioIcon from "../src/assets/allergens/fruttaAGuscio.svg";
+import LatteIcon from "../src/assets/allergens/latte.svg";
+import LupiniIcon from "../src/assets/allergens/lupini.svg";
+import MolluschiIcon from "../src/assets/allergens/molluschi.svg";
+import PesceIcon from "../src/assets/allergens/pesce.svg";
+import SedanoIcon from "../src/assets/allergens/sedano.svg";
+import SenapeIcon from "../src/assets/allergens/senape.svg";
+import SesamoIcon from "../src/assets/allergens/sesamo.svg";
+import SoiaIcon from "../src/assets/allergens/soia.svg";
+import UovaIcon from "../src/assets/allergens/uova.svg";
 
 export interface MenuItem {
   nome: string;
@@ -17,11 +31,10 @@ export enum SectionType {
   contorni = "Contorni",
   pizzeria = "Pizzeria",
   bibite = "Bibite",
-  cocktail = "Cocktail",
+  cocktail = "Cocktails",
   allergeni = "Allergeni",
 }
 export enum SubSectionType {
-  // antipasti = "Antipasti",
   pizzeClassiche = "Pizze classiche",
   pizzeCrema = "Pizze speciali con crema",
   pizzeBufala = "Pizze con Bufala DOP",
@@ -63,76 +76,107 @@ export enum Allergeni {
   molluschi = "Molluschi",
 }
 
+export function allergeneToPng(allergene: Allergeni) : string | undefined {
+  switch (allergene) {
+    case Allergeni.glutine:
+      return GlutineIcon;
+    case Allergeni.anidride:
+      return AnidriteIcon;
+    case Allergeni.crostacei:
+      return CrostaceiIcon;
+    case Allergeni.arachidi:
+      return ArachidiIcon;
+    case Allergeni.fruttaGuscio:
+      return FruttaAGuscioIcon;
+    case Allergeni.latte:
+      return LatteIcon;
+    case Allergeni.lupini:
+      return LupiniIcon;
+    case Allergeni.molluschi:
+      return MolluschiIcon;
+    case Allergeni.pesce:
+      return PesceIcon;
+    case Allergeni.sedano:
+      return SedanoIcon;
+    case Allergeni.senape:
+      return SenapeIcon;
+    case Allergeni.sesamo:
+      return SesamoIcon;
+    case Allergeni.soia:
+      return SoiaIcon;
+    case Allergeni.uova:
+      return UovaIcon;
+    default:
+      break;
+  }
+}
+
 export const menuIta: MenuItem[] = [
   {
     nome: "Bon bon di baccalà in pastella",
     section: SectionType.antipastiMare,
     price: "€ 10,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi]
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Zuppa di cozze",
     section: SectionType.antipastiMare,
     price: "€ 10,00",
-    allergens: [Allergeni.molluschi]
+    allergens: [Allergeni.molluschi],
   },
   {
     nome: "Soutè di molluschi",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
-    allergens: [Allergeni.molluschi]
+    allergens: [Allergeni.molluschi],
   },
   {
     nome: "Cocktail di gambero",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
-    allergens: [Allergeni.crostacei, Allergeni.senape]
-
+    allergens: [Allergeni.crostacei, Allergeni.senape],
   },
   {
     nome: "Insalata di mare",
     section: SectionType.antipastiMare,
     price: "€ 14,00",
-    allergens: [Allergeni.crostacei, Allergeni.molluschi]
+    allergens: [Allergeni.crostacei, Allergeni.molluschi],
   },
   {
     nome: "Polpo alla piastra su crema di patate alla paprika",
     section: SectionType.antipastiMare,
     price: "€ 14,00",
-    allergens: [Allergeni.latte, Allergeni.sedano, Allergeni.molluschi]
+    allergens: [Allergeni.latte, Allergeni.sedano, Allergeni.molluschi],
   },
   {
     nome: "Tris di tartara gambero rosa, salmone e ricciola",
     section: SectionType.antipastiMare,
     price: "€ 25,00",
-    allergens: [Allergeni.crostacei, Allergeni.pesce]
-
+    allergens: [Allergeni.crostacei, Allergeni.pesce],
   },
   {
     nome: "Gamberone di Mazara del Vallo in tempura",
     section: SectionType.antipastiMare,
     price: "€ 16,00",
-    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.uova]
-
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.uova],
   },
   {
     nome: "Gamberone rosso marinato 5pz.",
     section: SectionType.antipastiMare,
     price: "€ 16,00",
-    allergens: [Allergeni.crostacei]
+    allergens: [Allergeni.crostacei],
   },
   {
     nome: "Bruschetta ai ricci 5pz.",
     section: SectionType.antipastiMare,
     price: "€ 20,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi]
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Ostrica al pz.",
     section: SectionType.antipastiMare,
     price: "€ 3,50",
-    allergens: [ Allergeni.molluschi]
-
+    allergens: [Allergeni.molluschi],
   },
   // {
   //   nome: "Gamberone rosso di Mazara del Vallo (1° scelta) 4pz.",
@@ -144,14 +188,13 @@ export const menuIta: MenuItem[] = [
     nome: "Scampone del Mediterraneo (1° scelta) 4pz.",
     section: SectionType.antipastiMare,
     price: "€ 20,00",
-    allergens: [Allergeni.crostacei]
+    allergens: [Allergeni.crostacei],
   },
   {
     nome: "Cruditè x2",
     section: SectionType.antipastiMare,
     price: "€ 50,00",
-    allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi]
-
+    allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi],
   },
 
   //ANTIPASTI CLASSICI
@@ -185,46 +228,43 @@ export const menuIta: MenuItem[] = [
     nome: "Spaghetti vongole veraci",
     section: SectionType.primiPesce,
     price: "€ 14,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi]
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Linguine al nero di seppia",
     section: SectionType.primiPesce,
     price: "€ 15,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi]
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Linguine al nero di seppia, ricci e gamberi",
     section: SectionType.primiPesce,
     price: "€ 20,00",
-    allergens: [Allergeni.glutine,Allergeni.crostacei, Allergeni.molluschi]
-
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.molluschi],
   },
   {
     nome: "Linguine all'astice",
     section: SectionType.primiPesce,
     price: "€ 22,00",
-    allergens: [Allergeni.glutine,Allergeni.crostacei]
+    allergens: [Allergeni.glutine, Allergeni.crostacei],
   },
   {
     nome: "Spaghettone ai ricci",
     section: SectionType.primiPesce,
     price: "€ 20,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi]
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Paccheri gambero rosso, scampi e pesto di pistacchio",
     section: SectionType.primiPesce,
     price: "€ 18,00",
-    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.fruttaGuscio]
-
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.fruttaGuscio],
   },
   {
     nome: "Risotto ai frutti di mare",
     section: SectionType.primiPesce,
     price: "€ 14,00",
-    allergens: [ Allergeni.crostacei,Allergeni.uova,  Allergeni.molluschi]
-
+    allergens: [Allergeni.crostacei, Allergeni.uova, Allergeni.molluschi],
   },
 
   //SECONDI DI PESCE
@@ -232,25 +272,25 @@ export const menuIta: MenuItem[] = [
     nome: "Gamberone rosso di Mazara del Vallo 4pz.",
     section: SectionType.secondiPesce,
     price: "€ 20,00",
-    allergens: [Allergeni.crostacei]
+    allergens: [Allergeni.crostacei],
   },
   {
     nome: "Scamponi del Mar Mediterraneo (1° scelta) 4pz.",
     section: SectionType.secondiPesce,
     price: "€ 20,00",
-    allergens: [Allergeni.crostacei]
+    allergens: [Allergeni.crostacei],
   },
   {
     nome: "Aragosta",
     section: SectionType.secondiPesce,
     price: "€ 120,00/kg",
-    allergens: [Allergeni.crostacei]
+    allergens: [Allergeni.crostacei],
   },
   {
     nome: "Pescato locale del giorno (esposto in vetrina)",
     section: SectionType.secondiPesce,
     price: "€ 65,00/kg",
-    allergens: [Allergeni.pesce]
+    allergens: [Allergeni.pesce],
   },
 
   //CONTORNI
@@ -909,7 +949,6 @@ export const menuIta: MenuItem[] = [
     price: "€ 60,00",
   },
 
-
   // COCKTAIL
   {
     nome: "Negroni",
@@ -969,5 +1008,4 @@ export const menuIta: MenuItem[] = [
     section: SectionType.cocktail,
     price: "€ 6,00",
   },
-
 ];

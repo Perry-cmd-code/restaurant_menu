@@ -1,12 +1,9 @@
-
-
 $primary-text: #232323;
 $primary-blue: #1587ff;
 $secondary-blue: #b1d7ff;
 $primary-gold: #d8b955;
 
-
-*{
+* {
   box-sizing: border-box;
 }
 .main {
@@ -21,7 +18,7 @@ $primary-gold: #d8b955;
   //   margin: 0;
   // }
 
-  .chooseLanguage{
+  .chooseLanguage {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -44,7 +41,6 @@ $primary-gold: #d8b955;
   }
 
   .content {
-
     height: 70%;
     max-height: 70%;
     overflow-x: hidden;
@@ -104,12 +100,26 @@ $primary-gold: #d8b955;
         }
       }
 
-      .wrapperPizze, .allergeni{
+      .allergeni {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .singleAllergene {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          img {
+            width: 50px;
+          }
+        }
+      }
+
+      .wrapperPizze {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        .subtitle{
+        .subtitle {
           width: 100%;
           display: flex;
           justify-content: center;
@@ -119,7 +129,6 @@ $primary-gold: #d8b955;
           font-weight: 600;
         }
       }
-     
 
       .singleItem {
         width: 100%;
@@ -152,6 +161,14 @@ $primary-gold: #d8b955;
         .descrizione {
           font-style: italic;
           color: #808080;
+        }
+
+        .allergeni{
+          display: flex;
+          gap: 5px;
+          img{
+            width: 20px;
+          }
         }
       }
     }
