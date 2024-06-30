@@ -125,7 +125,7 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.molluschi],
   },
   {
-    nome: "Soutè di molluschi",
+    nome: "Sautè di molluschi",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
     allergens: [Allergeni.molluschi],

@@ -14,10 +14,7 @@ enum Language {
 }
 
 function App() {
-  const [filter, setFilter] = useState<SectionType | SectionTypeEn | undefined>(
-    // undefined
-    SectionType.allergeni
-  );
+  const [filter, setFilter] = useState<SectionType | SectionTypeEn | undefined>(undefined);
   const [language, setLanguage] = useState<Language>(Language.ita);
 
   return (

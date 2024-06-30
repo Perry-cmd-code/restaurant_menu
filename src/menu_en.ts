@@ -112,7 +112,7 @@ export function allergeneToSvgEn(allergene: AllergeniEn) : string | undefined {
 
 export const menuEnglish: MenuItem[] = [
   {
-    nome: "Bon bon di baccalà in pastella",
+    nome: "Bon bon of cod in batter",
     section: SectionTypeEn.antipastiMare,
     price: "€ 10,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
@@ -124,19 +124,19 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.molluschi],
   },
   {
-    nome: "Soutè di molluschi",
+    nome: "Shellfish sauté",
     section: SectionTypeEn.antipastiMare,
     price: "€ 12,00",
     allergens: [AllergeniEn.molluschi],
   },
   {
-    nome: "Cocktail di gambero",
+    nome: "Prawn cocktail",
     section: SectionTypeEn.antipastiMare,
     price: "€ 12,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.senape],
   },
   {
-    nome: "Insalata di mare",
+    nome: "Sea salad",
     section: SectionTypeEn.antipastiMare,
     price: "€ 14,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.molluschi],
@@ -249,7 +249,7 @@ export const menuEnglish: MenuItem[] = [
     ],
   },
   {
-    nome: "Linguine with lobster",
+    nome: "Linguine with red lobster",
     section: SectionTypeEn.primiPesce,
     price: "€ 22,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.crostacei],
@@ -291,7 +291,7 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.crostacei],
   },
   {
-    nome: "Lobster",
+    nome: "Spiny lobster",
     section: SectionTypeEn.secondiPesce,
     price: "€ 12,00/hectogram",
     allergens: [AllergeniEn.crostacei],
@@ -376,7 +376,7 @@ export const menuEnglish: MenuItem[] = [
   },
   {
     nome: "Diavola",
-    description: "Tomato, Fiordilatte from Campania, onion e spicy salami",
+    description: "Tomato, Fiordilatte from Campania, onion, spicy salami",
     section: SectionTypeEn.pizzeria,
     subSection: SubSectionTypeEn.pizzeClassiche,
     price: "€ 8,00",
