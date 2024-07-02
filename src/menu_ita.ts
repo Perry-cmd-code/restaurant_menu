@@ -125,13 +125,13 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.molluschi],
   },
   {
-    nome: "Sautè di molluschi",
+    nome: "Soutè di molluschi",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
     allergens: [Allergeni.molluschi],
   },
   {
-    nome: "Cocktail di gambero",
+    nome: "Cocktail di gamberi",
     section: SectionType.antipastiMare,
     price: "€ 12,00",
     allergens: [Allergeni.crostacei, Allergeni.senape],
@@ -149,7 +149,7 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.latte, Allergeni.sedano, Allergeni.molluschi],
   },
   {
-    nome: "Tris di tartara gambero rosa, salmone e ricciola",
+    nome: "Tris di tartare gambero rosa, salmone e ricciola",
     section: SectionType.antipastiMare,
     price: "€ 25,00",
     allergens: [Allergeni.crostacei, Allergeni.pesce],
@@ -307,7 +307,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Insalata estiva",
     section: SectionType.contorni,
-    price: "€ 5,00"
+    price: "€ 4,00"
 
   },
 
