@@ -281,7 +281,7 @@ export const menuEnglish: MenuItem[] = [
     description: "Ravioli stuffed with aubergine, fresh tomato sauce, salted ricotta cream",
     section: SectionTypeEn.primiPesce,
     price: "€ 12,00",
-    allergens: [AllergeniEn.glutine, AllergeniEn.latte],
+    // allergens: [AllergeniEn.glutine, AllergeniEn.latte],
   },
 
   //SECONDI DI PESCE

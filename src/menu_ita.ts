@@ -271,7 +271,7 @@ export const menuIta: MenuItem[] = [
   description: "Ravioli ripieni di melenzana, salsa di pomodoro fresco, crema di ricotta salata",
   section: SectionType.primiPesce,
   price: "€ 12,00",
-  allergens: [Allergeni.glutine, Allergeni.latte],
+  // allergens: [Allergeni.glutine, Allergeni.latte],
 },
 
 
