@@ -266,6 +266,15 @@ export const menuIta: MenuItem[] = [
     price: "€ 14,00",
     allergens: [Allergeni.crostacei, Allergeni.uova, Allergeni.molluschi],
   },
+  {
+  nome: "Norma",
+  description: "Ravioli ripieni di melenzana, salsa di pomodoro fresco, crema di ricotta salata",
+  section: SectionType.primiPesce,
+  price: "€ 12,00",
+  allergens: [Allergeni.glutine, Allergeni.latte],
+},
+
+
 
   //SECONDI DI PESCE
   {
