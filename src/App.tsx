@@ -68,7 +68,7 @@ function App() {
               ))}
 
             {filter != undefined &&
-              filter != SectionType.pizzeria && filter != SectionType.bibite &&
+              filter != SectionType.pizzeria && filter != SectionType.vini &&
               menuIta
                 .filter((el) => el.section === filter)
                 .map((menuItem) => {
@@ -152,7 +152,7 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionType.bibite && (
+{filter != undefined && filter == SectionType.vini && (
               <div className={styles.wrapperPizze}>
 
                 {menuIta
@@ -179,16 +179,16 @@ function App() {
                   })}
               </div>
             )}
-             {filter != undefined && filter == SectionType.bibite && (
+             {filter != undefined && filter == SectionType.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Birre classiche
+                Vino bianco Tenuto dello Jato
                 </strong>
 
                 {menuIta
                   .filter((el) => el.section === filter)
                   .filter(
-                    (item) => item.subSection === SubSectionType.birreClassiche
+                    (item) => item.subSection === SubSectionType.vinoBiancoJato
                   )
                   .map((menuItem) => {
                     return (
@@ -210,16 +210,16 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionType.bibite && (
+ {filter != undefined && filter == SectionType.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Vini bianchi
+                Vino rosso Tenuto dello Jato
                 </strong>
 
                 {menuIta
                   .filter((el) => el.section === filter)
                   .filter(
-                    (item) => item.subSection === SubSectionType.viniBianchi
+                    (item) => item.subSection === SubSectionType.vinoRossoJato
                   )
                   .map((menuItem) => {
                     return (
@@ -241,7 +241,7 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionType.bibite && (
+{/* {filter != undefined && filter == SectionType.bibite && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
                   Spumanti
@@ -270,9 +270,9 @@ function App() {
                     );
                   })}
               </div>
-            )}
+            )}  */}
 
-{filter != undefined && filter == SectionType.bibite && (
+{/* {filter != undefined && filter == SectionType.bibite && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
                   Champagne
@@ -301,7 +301,7 @@ function App() {
                     );
                   })}
               </div>
-            )}
+            )} */}
 
 {filter != undefined && filter == SectionType.allergeni && (
               <div className={styles.allergeni}>
@@ -343,7 +343,7 @@ function App() {
 
             {filter != undefined &&
               filter != SectionTypeEn.pizzeria &&
-              filter != SectionTypeEn.bibite &&
+              filter != SectionTypeEn.vini &&
               menuEnglish
                 .filter((el) => el.section === filter)
                 .map((menuItem) => {
@@ -400,7 +400,7 @@ function App() {
             {filter != undefined && filter == SectionTypeEn.pizzeria && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Pizze con mozzarella di bufala
+                Pizzas with buffalo mozzarella DOP
                 </strong>
 
                 {menuEnglish
@@ -428,7 +428,7 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionTypeEn.bibite && (
+{filter != undefined && filter == SectionTypeEn.vini && (
               <div className={styles.wrapperPizze}>
 
                 {menuEnglish
@@ -455,16 +455,16 @@ function App() {
                   })}
               </div>
             )}
-             {filter != undefined && filter == SectionTypeEn.bibite && (
+             {filter != undefined && filter == SectionTypeEn.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  Classic beers
+                  White Wines from Tenute dello Jato
                 </strong>
 
                 {menuEnglish
                   .filter((el) => el.section === filter)
                   .filter(
-                    (item) => item.subSection === SubSectionTypeEn.birreClassiche
+                    (item) => item.subSection === SubSectionTypeEn.vinoBiancoJato
                   )
                   .map((menuItem) => {
                     return (
@@ -486,16 +486,16 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionTypeEn.bibite && (
+{filter != undefined && filter == SectionTypeEn.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                  White wines
+                  Red Wines from Tenute dello Jato
                 </strong>
 
                 {menuEnglish
                   .filter((el) => el.section === filter)
                   .filter(
-                    (item) => item.subSection === SubSectionTypeEn.viniBianchi
+                    (item) => item.subSection === SubSectionTypeEn.vinoRossoJato
                   )
                   .map((menuItem) => {
                     return (
@@ -517,67 +517,9 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionTypeEn.bibite && (
-              <div className={styles.wrapperPizze}>
-                <strong className={styles.subtitle}>
-                  Sparkling wines
-                </strong>
 
-                {menuEnglish
-                  .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === SubSectionTypeEn.spumanti
-                  )
-                  .map((menuItem) => {
-                    return (
-                      <div className={styles.singleItem}>
-                        <div className={styles.head}>
-                          <strong className={styles.nome}>
-                            {menuItem.nome}
-                          </strong>
-                          <strong className={styles.prezzo}>
-                            {menuItem.price}
-                          </strong>
-                        </div>
-                        <p className={styles.descrizione}>
-                          {menuItem.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-              </div>
-            )}
 
-{filter != undefined && filter == SectionTypeEn.bibite && (
-              <div className={styles.wrapperPizze}>
-                <strong className={styles.subtitle}>
-                  Champagne
-                </strong>
 
-                {menuEnglish
-                  .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === SubSectionTypeEn.champagne
-                  )
-                  .map((menuItem) => {
-                    return (
-                      <div className={styles.singleItem}>
-                        <div className={styles.head}>
-                          <strong className={styles.nome}>
-                            {menuItem.nome}
-                          </strong>
-                          <strong className={styles.prezzo}>
-                            {menuItem.price}
-                          </strong>
-                        </div>
-                        <p className={styles.descrizione}>
-                          {menuItem.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-              </div>
-            )}
             {filter != undefined && filter == SectionTypeEn.allergeni && (
               <div className={styles.allergeni}>
                 {Object.values(AllergeniEn).map((allergene)=><p className={styles.singleAllergene}>
