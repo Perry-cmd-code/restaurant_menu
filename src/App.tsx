@@ -484,7 +484,7 @@ function App() {
               </div>
             )}
           </div>
-          <i style={{width: "100%", textAlign: "right", paddingTop: "10px"}}>Coperto € 2,00</i>
+          <i style={{width: "100%", textAlign: "right", paddingTop: "10px"}}>Cover charge € 2,00</i>
         </div>
       )}
     </div>
