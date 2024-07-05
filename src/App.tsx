@@ -5,8 +5,20 @@ import itaIcon from "./italia.png";
 import arrowBack from "./arrowBack.svg";
 
 import styles from "./app.module.scss";
-import { Allergeni, SectionType, SubSectionType, allergeneToPng, menuIta } from "./menu_ita";
-import { AllergeniEn, SectionTypeEn, SubSectionTypeEn, allergeneToSvgEn, menuEnglish } from "./menu_en";
+import {
+  Allergeni,
+  SectionType,
+  SubSectionType,
+  allergeneToPng,
+  menuIta,
+} from "./menu_ita";
+import {
+  AllergeniEn,
+  SectionTypeEn,
+  SubSectionTypeEn,
+  allergeneToSvgEn,
+  menuEnglish,
+} from "./menu_en";
 
 enum Language {
   ita,
@@ -14,12 +26,19 @@ enum Language {
 }
 
 function App() {
-  const [filter, setFilter] = useState<SectionType | SectionTypeEn | undefined>(undefined);
+  const [filter, setFilter] = useState<SectionType | SectionTypeEn | undefined>(
+    undefined
+  );
   const [language, setLanguage] = useState<Language>(Language.ita);
 
   return (
     <div className={styles.main}>
-      <div className={styles.chooseLanguage} onClick={()=>{setFilter(undefined)}}>
+      <div
+        className={styles.chooseLanguage}
+        onClick={() => {
+          setFilter(undefined);
+        }}
+      >
         {language === Language.ita ? (
           <img
             src={ukIcon}
@@ -68,7 +87,8 @@ function App() {
               ))}
 
             {filter != undefined &&
-              filter != SectionType.pizzeria && filter != SectionType.vini &&
+              filter != SectionType.pizzeria &&
+              filter != SectionType.vini &&
               menuIta
                 .filter((el) => el.section === filter)
                 .map((menuItem) => {
@@ -84,14 +104,14 @@ function App() {
                         {menuItem.description}
                       </p>
                       <div className={styles.allergeni}>
-                        {menuItem.allergens?.map((el)=> <img src={allergeneToPng(el)}/>)}
-                    </div>
-
+                        {menuItem.allergens?.map((el) => (
+                          <img src={allergeneToPng(el)} />
+                        ))}
+                      </div>
                     </div>
                   );
                 })}
 
-          
             {filter != undefined && filter == SectionType.pizzeria && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>Pizze classiche</strong>
@@ -152,14 +172,11 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionType.vini && (
+            {filter != undefined && filter == SectionType.vini && (
               <div className={styles.wrapperPizze}>
-
                 {menuIta
                   .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === undefined
-                  )
+                  .filter((item) => item.subSection === undefined)
                   .map((menuItem) => {
                     return (
                       <div className={styles.singleItem}>
@@ -179,10 +196,10 @@ function App() {
                   })}
               </div>
             )}
-             {filter != undefined && filter == SectionType.vini && (
+            {filter != undefined && filter == SectionType.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                Vino bianco Tenuto dello Jato
+                  Vino bianco Tenuto dello Jato
                 </strong>
 
                 {menuIta
@@ -210,10 +227,10 @@ function App() {
               </div>
             )}
 
- {filter != undefined && filter == SectionType.vini && (
+            {filter != undefined && filter == SectionType.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                Vino rosso Tenuto dello Jato
+                  Vino rosso Tenuto dello Jato
                 </strong>
 
                 {menuIta
@@ -241,78 +258,19 @@ function App() {
               </div>
             )}
 
-{/* {filter != undefined && filter == SectionType.bibite && (
-              <div className={styles.wrapperPizze}>
-                <strong className={styles.subtitle}>
-                  Spumanti
-                </strong>
-
-                {menuIta
-                  .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === SubSectionType.spumanti
-                  )
-                  .map((menuItem) => {
-                    return (
-                      <div className={styles.singleItem}>
-                        <div className={styles.head}>
-                          <strong className={styles.nome}>
-                            {menuItem.nome}
-                          </strong>
-                          <strong className={styles.prezzo}>
-                            {menuItem.price}
-                          </strong>
-                        </div>
-                        <p className={styles.descrizione}>
-                          {menuItem.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-              </div>
-            )}  */}
-
-{/* {filter != undefined && filter == SectionType.bibite && (
-              <div className={styles.wrapperPizze}>
-                <strong className={styles.subtitle}>
-                  Champagne
-                </strong>
-
-                {menuIta
-                  .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === SubSectionType.champagne
-                  )
-                  .map((menuItem) => {
-                    return (
-                      <div className={styles.singleItem}>
-                        <div className={styles.head}>
-                          <strong className={styles.nome}>
-                            {menuItem.nome}
-                          </strong>
-                          <strong className={styles.prezzo}>
-                            {menuItem.price}
-                          </strong>
-                        </div>
-                        <p className={styles.descrizione}>
-                          {menuItem.description}
-                        </p>
-                      </div>
-                    );
-                  })}
-              </div>
-            )} */}
-
-{filter != undefined && filter == SectionType.allergeni && (
+            {filter != undefined && filter == SectionType.allergeni && (
               <div className={styles.allergeni}>
-                {Object.values(Allergeni).map((allergene)=><p className={styles.singleAllergene}>
-                <img src={allergeneToPng(allergene)}/>
-                  
-                  {allergene} 
-                  </p>)}
+                {Object.values(Allergeni).map((allergene) => (
+                  <p className={styles.singleAllergene}>
+                    <img src={allergeneToPng(allergene)} />
+
+                    {allergene}
+                  </p>
+                ))}
               </div>
             )}
           </div>
+          <i style={{width: "100%", textAlign: "right", paddingTop: "10px"}}>Coperto € 2,00</i>
         </div>
       ) : (
         <div className={styles.content}>
@@ -359,13 +317,13 @@ function App() {
                         {menuItem.description}
                       </p>
                       <div className={styles.allergeni}>
-                        {menuItem.allergens?.map((el)=> <img src={allergeneToSvgEn(el)}/>)}
-                    </div>
+                        {menuItem.allergens?.map((el) => (
+                          <img src={allergeneToSvgEn(el)} />
+                        ))}
+                      </div>
                     </div>
                   );
                 })}
-
-           
 
             {filter != undefined && filter == SectionTypeEn.pizzeria && (
               <div className={styles.wrapperPizze}>
@@ -400,7 +358,7 @@ function App() {
             {filter != undefined && filter == SectionTypeEn.pizzeria && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
-                Pizzas with buffalo mozzarella DOP
+                  Pizzas with buffalo mozzarella DOP
                 </strong>
 
                 {menuEnglish
@@ -428,14 +386,11 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionTypeEn.vini && (
+            {filter != undefined && filter == SectionTypeEn.vini && (
               <div className={styles.wrapperPizze}>
-
                 {menuEnglish
                   .filter((el) => el.section === filter)
-                  .filter(
-                    (item) => item.subSection === undefined
-                  )
+                  .filter((item) => item.subSection === undefined)
                   .map((menuItem) => {
                     return (
                       <div className={styles.singleItem}>
@@ -455,7 +410,7 @@ function App() {
                   })}
               </div>
             )}
-             {filter != undefined && filter == SectionTypeEn.vini && (
+            {filter != undefined && filter == SectionTypeEn.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
                   White Wines from Tenute dello Jato
@@ -464,7 +419,8 @@ function App() {
                 {menuEnglish
                   .filter((el) => el.section === filter)
                   .filter(
-                    (item) => item.subSection === SubSectionTypeEn.vinoBiancoJato
+                    (item) =>
+                      item.subSection === SubSectionTypeEn.vinoBiancoJato
                   )
                   .map((menuItem) => {
                     return (
@@ -486,7 +442,7 @@ function App() {
               </div>
             )}
 
-{filter != undefined && filter == SectionTypeEn.vini && (
+            {filter != undefined && filter == SectionTypeEn.vini && (
               <div className={styles.wrapperPizze}>
                 <strong className={styles.subtitle}>
                   Red Wines from Tenute dello Jato
@@ -517,21 +473,20 @@ function App() {
               </div>
             )}
 
-
-
-
             {filter != undefined && filter == SectionTypeEn.allergeni && (
               <div className={styles.allergeni}>
-                {Object.values(AllergeniEn).map((allergene)=><p className={styles.singleAllergene}>
-                <img src={allergeneToSvgEn(allergene)}/>
-                  {allergene} 
-                  </p>)}
+                {Object.values(AllergeniEn).map((allergene) => (
+                  <p className={styles.singleAllergene}>
+                    <img src={allergeneToSvgEn(allergene)} />
+                    {allergene}
+                  </p>
+                ))}
               </div>
             )}
           </div>
+          <i style={{width: "100%", textAlign: "right", paddingTop: "10px"}}>Coperto € 2,00</i>
         </div>
       )}
-      
     </div>
   );
 }

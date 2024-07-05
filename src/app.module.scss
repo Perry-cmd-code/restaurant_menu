@@ -7,28 +7,34 @@ $primary-gold: #d8b955;
   box-sizing: border-box;
 }
 .main {
-  height: 100vh;
-  max-height: 100vh;
+  box-sizing: border-box;
+  height: calc(100vh - 75px);
+  max-height: calc(100vh - 75px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: hidden;
+  overflow: hidden;
 
   // p{
   //   margin: 0;
   // }
 
   .chooseLanguage {
+    box-sizing: border-box;
     width: 100%;
+    height: 10%;
+    max-height: 10%;
     display: flex;
     justify-content: flex-end;
     padding: 10px 5px;
   }
 
   .logo {
+    box-sizing: border-box;
     height: 25%;
     max-height: 25%;
-    padding: 20px;
+    padding: 10px;
+
 
     display: flex;
     flex-direction: column;
@@ -43,12 +49,13 @@ $primary-gold: #d8b955;
   .content {
     height: 70%;
     max-height: 70%;
-    overflow-x: hidden;
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    box-sizing: border-box;
+
 
     .title {
       height: 10%;
@@ -76,7 +83,7 @@ $primary-gold: #d8b955;
       width: 100%;
       height: 90%;
       max-height: 90%;
-      overflow-y: auto;
+      overflow-y: scroll;
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
@@ -84,7 +91,7 @@ $primary-gold: #d8b955;
       align-items: center;
       gap: 15px;
       padding: 0 10px;
-      padding-bottom: 70px;
+      box-sizing: border-box;
 
       .singleMenuItem {
         width: 60%;
