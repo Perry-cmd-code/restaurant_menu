@@ -34,6 +34,7 @@ export enum SectionTypeEn {
   vini = "Wines",
   champagne = "Champagne",
   spumanti = "Bubbly wine",
+  fruttaDessertDigestivi = "Fruit, dessert and digestif", 
   cocktail = "Cocktails",
   allergeni = "Allergens",
 }
@@ -757,6 +758,21 @@ export const menuEnglish: MenuItem[] = [
     section: SectionTypeEn.bibite,
     price: "€ 2,50",
   },
+  {
+    nome: "Redbull.",
+    section: SectionTypeEn.bibite,
+    price: "€ 3,50",
+  },
+  {
+    nome: "Peach tea San Benedetto 33cl.",
+    section: SectionTypeEn.bibite,
+    price: "€ 2,00",
+  },
+  {
+    nome: "Lemon tea San Benedetto 33cl.",
+    section: SectionTypeEn.bibite,
+    price: "€ 2,00",
+  },
 
   //BIRRE CLASSICHE
   {
@@ -1127,5 +1143,62 @@ export const menuEnglish: MenuItem[] = [
     nome: "Gin tonic/lemon",
     section: SectionTypeEn.cocktail,
     price: "€ 6,00",
+  },
+  {
+    nome: "Americano",
+    section: SectionTypeEn.cocktail,
+    price: "€ 7,00",
+  },
+  {
+    nome: "London mule",
+    section: SectionTypeEn.cocktail,
+    price: "€ 7,00",
+  },
+
+   // FRUTTA DESSERT E DIGESTIVI
+   {
+    nome: "Fruit",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Dessert",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Espresso coffe",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 1,00",
+  },
+  {
+    nome: "Amaro del capo",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Amaro Montenegro",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Amaro Jagermeister",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Amaro Averna",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Limoncello",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Sambuca",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 3,00",
   },
 ];

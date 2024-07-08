@@ -35,6 +35,7 @@ export enum SectionType {
   vini = "Vini",
   champagne = "Champagne",
   spumanti = "Spumanti",
+  fruttaDessertDigestivi= "Frutta, dessert e digestivi",
   cocktail = "Cocktails",
   allergeni = "Allergeni",
 }
@@ -753,6 +754,21 @@ export const menuIta: MenuItem[] = [
     section: SectionType.bibite,
     price: "€ 2,50",
   },
+  {
+    nome: "Redbull.",
+    section: SectionType.bibite,
+    price: "€ 3,50",
+  },
+  {
+    nome: "The pesca San Benedetto 33cl.",
+    section: SectionType.bibite,
+    price: "€ 2,00",
+  },
+  {
+    nome: "The limone San Benedetto 33cl.",
+    section: SectionType.bibite,
+    price: "€ 2,00",
+  },
 
   //BIRRE CLASSICHE
   {
@@ -785,11 +801,11 @@ export const menuIta: MenuItem[] = [
     section: SectionType.birre,
     price: "€ 3,00",
   },
-  // {
-  //   nome: "Messina ai cristalli di sale 50cl.",
-  //   section: SectionType.birre,
-  //   price: "€ 4,00",
-  // },
+   {
+    nome: "Messina ai cristalli di sale 50cl.",
+     section: SectionType.birre,
+     price: "€ 4,00",
+  },
   {
     nome: "Tennent's 33cl.",
     section: SectionType.birre,
@@ -1129,5 +1145,62 @@ export const menuIta: MenuItem[] = [
     nome: "Gin tonic/lemon",
     section: SectionType.cocktail,
     price: "€ 6,00",
+  },
+  {
+    nome: "Americano",
+    section: SectionType.cocktail,
+    price: "€ 7,00",
+  },
+  {
+    nome: "London mule",
+    section: SectionType.cocktail,
+    price: "€ 7,00",
+  },
+
+  // FRUTTA DESSERT E DIGESTIVI
+  {
+    nome: "Frutta",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Dessert",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Caffè",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 1,00",
+  },
+  {
+    nome: "Amaro del capo",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Amaro Montenegro",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Amaro Jagermeister",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Amaro Averna",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 4,00",
+  },
+  {
+    nome: "Limoncello",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Sambuca",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 3,00",
   },
 ];
