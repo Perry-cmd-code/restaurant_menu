@@ -23,8 +23,8 @@ export interface MenuItem {
 }
 
 export enum SectionTypeEn {
-  antipastiMare = "Seafood starter",
-  antipastiClassici = "Classic starter",
+  // antipastiMare = "Seafood starter",
+  antipasti = "Starter",
   primiPesce = "First courses",
   secondiPesce = "Second courses",
   contorni = "Side dishes",
@@ -34,7 +34,7 @@ export enum SectionTypeEn {
   vini = "Wines",
   champagne = "Champagne",
   spumanti = "Bubbly wine",
-  fruttaDessertDigestivi = "Fruit, dessert and digestif", 
+  fruttaDessertDigestivi = "Fruit, dessert and digestif",
   cocktail = "Cocktails",
   allergeni = "Allergens",
 }
@@ -44,7 +44,7 @@ export enum SubSectionTypeEn {
   pizzeBufala = " ",
 
   vinoBiancoJato = "White wines from Tenuto dello Jato",
-  vinoRossoJato = "Red wines Tenuto dello Jato"
+  vinoRossoJato = "Red wines Tenuto dello Jato",
 }
 
 export enum AllergeniEn {
@@ -78,7 +78,7 @@ export enum AllergeniEn {
   molluschi = "Molluscs",
 }
 
-export function allergeneToSvgEn(allergene: AllergeniEn) : string | undefined {
+export function allergeneToSvgEn(allergene: AllergeniEn): string | undefined {
   switch (allergene) {
     case AllergeniEn.glutine:
       return GlutineIcon;
@@ -113,89 +113,80 @@ export function allergeneToSvgEn(allergene: AllergeniEn) : string | undefined {
   }
 }
 
-
 export const menuEnglish: MenuItem[] = [
+  //ANTIPASTI
   {
-    nome: "Bon bon of cod in batter",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 10,00",
-    allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
+    nome: "Portion of french fries",
+    section: SectionTypeEn.antipasti,
+    price: "€ 3,00",
   },
   {
+    nome: "Pane pizza bruschetta",
+    section: SectionTypeEn.antipasti,
+    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
+    price: "€ 9,00",
+  },
+  {
+    nome: "Classic bruschetta 6pieces.",
+    section: SectionTypeEn.antipasti,
+    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
+    price: "€ 5,00",
+  },
+  {
+    nome: "Antipasto Caldo",
+    section: SectionTypeEn.antipasti,
+    description:
+      "French fries, panelle, crocchè, onion rings, meat arancine, butter and ham arancine",
+    price: "€ 5,00",
+  },
+
+  {
     nome: "Mussel soup",
-    section: SectionTypeEn.antipastiMare,
+    section: SectionTypeEn.antipasti,
     price: "€ 10,00",
     allergens: [AllergeniEn.molluschi],
   },
   {
     nome: "Shellfish sauté",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 12,00",
+    section: SectionTypeEn.antipasti,
+    price: "€ 14,00",
     allergens: [AllergeniEn.molluschi],
   },
   {
-    nome: "Prawn cocktail",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 12,00",
-    allergens: [AllergeniEn.crostacei, AllergeniEn.senape],
-  },
-  {
     nome: "Sea salad",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 14,00",
+    section: SectionTypeEn.antipasti,
+    price: "€ 15,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.molluschi],
   },
+
   {
-    nome: "Grilled octopus on paprika potato cream",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 14,00",
-    allergens: [AllergeniEn.latte, AllergeniEn.sedano, AllergeniEn.molluschi],
-  },
-  {
-    nome: "Trio of pink prawn tartare, salmon and amberjack",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 25,00",
-    allergens: [AllergeniEn.crostacei, AllergeniEn.pesce],
-  },
-  {
-    nome: "Tempura red shrimps from Mazara del Vallo",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 16,00",
-    allergens: [AllergeniEn.glutine, AllergeniEn.crostacei, AllergeniEn.uova],
-  },
-  {
-    nome: "Marinated red shrimps 5pieces",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 16,00",
+    nome: "Prawn tartare",
+    section: SectionTypeEn.antipasti,
+    price: "€ 20,00",
     allergens: [AllergeniEn.crostacei],
   },
   {
-    nome: "Bruschetta with urchins 5pieces",
-    section: SectionTypeEn.antipastiMare,
+    nome: "Marinated red shrimps  from Mazara del Vallo 4pieces",
+    section: SectionTypeEn.antipasti,
+    price: "€ 20,00",
+    allergens: [AllergeniEn.crostacei],
+  },
+  {
+    nome: "Bruschetta with urchins 4pieces",
+    section: SectionTypeEn.antipasti,
     price: "€ 20,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
     nome: "Oyster 1piece",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 3,50",
+    section: SectionTypeEn.antipasti,
+    price: "€ 3,00",
     allergens: [AllergeniEn.molluschi],
-  },
-  // {
-  //   nome: "Gamberone rosso di Mazara del Vallo (1° scelta) 4pz.",
-  //   section: SectionTypeEn.antipastiMare,
-  //   price: "€ 20,00",
-  // },
-  {
-    nome: "Scamponi from the Mediterranean Sea (1° choice) 4 pieces",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 20,00",
-    allergens: [AllergeniEn.crostacei],
   },
   {
     nome: "Cruditè x2",
-    section: SectionTypeEn.antipastiMare,
-    price: "€ 50,00",
+    section: SectionTypeEn.antipasti,
+    price: "€ 40,00",
     allergens: [
       AllergeniEn.crostacei,
       AllergeniEn.pesce,
@@ -203,37 +194,23 @@ export const menuEnglish: MenuItem[] = [
     ],
   },
 
-  //ANTIPASTI CLASSICI
   {
-    nome: "Classic bruschetta 6pieces.",
-    section: SectionTypeEn.antipastiClassici,
-    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-    price: "€ 5,00",
-  },
-  {
-    nome: "Pane pizza bruschetta",
-    section: SectionTypeEn.antipastiClassici,
-    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-    price: "€ 9,00",
-  },
-  {
-    nome: "Antipasto Caldo",
-    section: SectionTypeEn.antipastiClassici,
-    description:
-      "French fries, panelle, crocchè, onion rings, meat arancine, butter and ham arancine, fried mini mozzarella",
-    price: "€ 6,00",
-  },
-  {
-    nome: "Portion of french fries",
-    section: SectionTypeEn.antipastiClassici,
-    price: "€ 3,00",
+    nome: "Frittura!",
+    description: "Fried squid, baby squid and prawn",
+    section: SectionTypeEn.antipasti,
+    price: "€ 15,00",
+    allergens: [
+      AllergeniEn.crostacei,
+      AllergeniEn.pesce,
+      AllergeniEn.molluschi,
+    ],
   },
 
   //PRIMI PIATTI MARE
   {
     nome: "Spaghetti with clams",
     section: SectionTypeEn.primiPesce,
-    price: "€ 14,00",
+    price: "€ 15,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
@@ -243,9 +220,9 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
-    nome: "Linguine with cuttlefish ink, sea urchins and shrimps",
+    nome: "Linguine with cuttlefish ink, shrimps tartare and sea urchins",
     section: SectionTypeEn.primiPesce,
-    price: "€ 20,00",
+    price: "€ 25,00",
     allergens: [
       AllergeniEn.glutine,
       AllergeniEn.crostacei,
@@ -255,19 +232,19 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Linguine with red lobster",
     section: SectionTypeEn.primiPesce,
-    price: "€ 22,00",
+    price: "€ 25,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.crostacei],
   },
   {
     nome: "Spaghettone with sea urchins",
     section: SectionTypeEn.primiPesce,
-    price: "€ 20,00",
+    price: "€ 25,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
-    nome: "Paccheri red shrimp, scampi and pistachio pesto",
+    nome: "Paccheri red shrimp, scampi, pistachio pesto and buffalo stracciatella ",
     section: SectionTypeEn.primiPesce,
-    price: "€ 18,00",
+    price: "€ 22,00",
     allergens: [
       AllergeniEn.glutine,
       AllergeniEn.crostacei,
@@ -277,58 +254,58 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Risotto with seafood",
     section: SectionTypeEn.primiPesce,
-    price: "€ 14,00",
+    price: "€ 15,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.uova, AllergeniEn.molluschi],
-  },
-  {
-    nome: "Norma",
-    description: "Ravioli stuffed with aubergine, fresh tomato sauce, salted ricotta cream",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 12,00",
-    // allergens: [AllergeniEn.glutine, AllergeniEn.latte],
   },
 
   //SECONDI DI PESCE
   {
-    nome: "Red shrimp from Mazara del Vallo 4 pieces",
+    nome: "Grilled octopus on paprika potato cream",
+    section: SectionTypeEn.secondiPesce,
+    price: "€ 14,00",
+    allergens: [AllergeniEn.latte, AllergeniEn.sedano, AllergeniEn.molluschi],
+  },
+  {
+    nome: "Grilled red shrimp from Mazara del Vallo 4 pieces",
     section: SectionTypeEn.secondiPesce,
     price: "€ 20,00",
     allergens: [AllergeniEn.crostacei],
   },
   {
-    nome: "Scamponi from the Mediterranean Sea (1° choice) 4 pieces",
+    nome: "Red prawn sauté from Mazara del Vallo 4 pieces",
     section: SectionTypeEn.secondiPesce,
     price: "€ 20,00",
     allergens: [AllergeniEn.crostacei],
   },
   {
-    nome: "Spiny lobster",
+    nome: "Palermo-style swordfish revisited",
     section: SectionTypeEn.secondiPesce,
-    price: "€ 12,00/hectogram",
-    allergens: [AllergeniEn.crostacei],
-  },
-  {
-    nome: "Local catch of the day (displayed in the window)",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 7,00/hectogram",
+    price: "€ 25,00",
     allergens: [AllergeniEn.pesce],
   },
+  {
+    nome: "Grill beef fillet",
+    section: SectionTypeEn.secondiPesce,
+    price: "€ 18,00",
+    allergens: [AllergeniEn.pesce],
+  },
+
 
   //CONTORNI
   {
     nome: "Baked potatoes",
     section: SectionTypeEn.contorni,
-    price: "€ 4,00"
+    price: "€ 4,00",
   },
   {
     nome: "Seasonal grilled vegetables",
     section: SectionTypeEn.contorni,
-    price: "€ 5,00"
+    price: "€ 5,00",
   },
   {
     nome: "Summer salad",
     section: SectionTypeEn.contorni,
-    price: "€ 4,00"
+    price: "€ 6,00",
   },
 
   //PIZZE
@@ -721,12 +698,12 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Still water 0,75 cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 2,00",
+    price: "€ 2,50",
   },
   {
     nome: "Sparkling water 0,75 cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 2,00",
+    price: "€ 2,50",
   },
   {
     nome: "Coca cola in glass bottle 33cl.",
@@ -751,7 +728,7 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Sprite in glass bottle 33cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 2,50",
+    price: "€ 3,00",
   },
   {
     nome: "Chinotto S. Pellegrino 33cl.",
@@ -773,37 +750,27 @@ export const menuEnglish: MenuItem[] = [
     section: SectionTypeEn.bibite,
     price: "€ 2,00",
   },
+  {
+    nome: "Schweppes lemon 33cl.",
+    section: SectionTypeEn.bibite,
+    price: "€ 2,50",
+  },
+  {
+    nome: "Schweppes tonic 33cl.",
+    section: SectionTypeEn.bibite,
+    price: "€ 2,50",
+  },
 
   //BIRRE CLASSICHE
   {
-    nome: "Heineken 33cl.",
+    nome: "Draft beer 0,20cl.",
     section: SectionTypeEn.birre,
     price: "€ 3,00",
   },
   {
-    nome: "Heineken 66cl.",
+    nome: "Draft beer 0,40cl.",
     section: SectionTypeEn.birre,
-    price: "€ 4,00",
-  },
-  {
-    nome: "Beck's 33cl.",
-    section: SectionTypeEn.birre,
-    price: "€ 3,00",
-  },
-  {
-    nome: "Beck's 66cl.",
-    section: SectionTypeEn.birre,
-    price: "€ 4,00",
-  },
-  {
-    nome: "Moretti  33cl.",
-    section: SectionTypeEn.birre,
-    price: "€ 2,00",
-  },
-  {
-    nome: "Moretti 66cl.",
-    section: SectionTypeEn.birre,
-    price: "€ 3,00",
+    price: "€ 5,00",
   },
   {
     nome: "Messina to salt crystals 50cl.",
@@ -929,118 +896,118 @@ export const menuEnglish: MenuItem[] = [
 
   {
     nome: "4 Luglio bianco frizzante IGP terre siciliane",
-     description: "Bottle 75 cl.",
-     section: SectionTypeEn.vini,
-     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 20,00",
-   },
-   {
+    description: "Bottle 75 cl.",
+    section: SectionTypeEn.vini,
+    subSection: SubSectionTypeEn.vinoBiancoJato,
+    price: "€ 20,00",
+  },
+  {
     nome: "Al mio amico Grillo DOC Sicily",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 20,00",
-   },
-   {
+    price: "€ 20,00",
+  },
+  {
     nome: "Catarratto IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Chardonnay IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Etna bianco",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 25,00",
-   },
-   {
+    price: "€ 25,00",
+  },
+  {
     nome: "Grillo DOC di Sicily",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Pinot grigio",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoBiancoJato,
-     price: "€ 20,00",
-   },
+    price: "€ 20,00",
+  },
 
   //  VINI ROSSi
   {
     nome: "Al mio amico Nero d'Avola DOC Sicilia",
-     description: "Bottle 75 cl.",
-     section: SectionTypeEn.vini,
-     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 22,00",
-   },
-   {
+    description: "Bottle 75 cl.",
+    section: SectionTypeEn.vini,
+    subSection: SubSectionTypeEn.vinoRossoJato,
+    price: "€ 22,00",
+  },
+  {
     nome: "Cabernet Sauvignon IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Etna rosso",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 25,00",
-   },
-   {
+    price: "€ 25,00",
+  },
+  {
     nome: "Frappato IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 20,00",
-   },
-   {
+    price: "€ 20,00",
+  },
+  {
     nome: "Merlot IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Nero d'Avola DOC Sicilia",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Perricone IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Syrah IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 18,00",
-   },
-   {
+    price: "€ 18,00",
+  },
+  {
     nome: "Syrah firritato IGP terre siciliane",
     description: "Bottle 75 cl.",
     section: SectionTypeEn.vini,
     subSection: SubSectionTypeEn.vinoRossoJato,
-     price: "€ 25,00",
-   },
+    price: "€ 25,00",
+  },
 
   // SPUMANTI
   {
@@ -1065,7 +1032,7 @@ export const menuEnglish: MenuItem[] = [
   },
   {
     nome: "Bellavista Blanc",
-   section: SectionTypeEn.spumanti, 
+    section: SectionTypeEn.spumanti,
     price: "€ 50,00",
   },
 
@@ -1085,11 +1052,23 @@ export const menuEnglish: MenuItem[] = [
     section: SectionTypeEn.champagne,
     price: "€ 60,00",
   },
-   // COCKTAIL
-   {
+  // COCKTAIL
+  {
     nome: "Negroni",
     section: SectionTypeEn.cocktail,
-    description: "Gin, Campari, Vermouth rosso",
+    description: "Gin, Campari, red Martini",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Negroni sbagliato",
+    section: SectionTypeEn.cocktail,
+    description: "Sparkling wine, Campari,red Martini",
+    price: "€ 7,00"
+  },
+  {
+    nome: "Negrowski",
+    section: SectionTypeEn.cocktail,
+    description: "Vodka, Campari, Martini",
     price: "€ 7,00",
   },
   {
@@ -1101,7 +1080,7 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Mojito",
     section: SectionTypeEn.cocktail,
-    description: "Rum, lime, foglie di menta, zucchero di canna, soda",
+    description: "Rum, lime, mint leaves, brown sugar, soda",
     price: "€ 7,00",
   },
   {
@@ -1130,13 +1109,13 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Moscow mule",
     section: SectionTypeEn.cocktail,
-    description: "Vodka, ginger beer, succo di limone",
+    description: "Vodka, ginger beer, lime juice",
     price: "€ 7,00",
   },
   {
     nome: "Malibù",
     section: SectionTypeEn.cocktail,
-    description: "Succo d'ananas, malibù, sciroppo alla fragola",
+    description: "Ananas juice, malibù, strawberry syrup",
     price: "€ 7,00",
   },
   {
@@ -1146,25 +1125,50 @@ export const menuEnglish: MenuItem[] = [
   },
   {
     nome: "Americano",
+    description: "Red Martini, Campari, soda",
     section: SectionTypeEn.cocktail,
     price: "€ 7,00",
   },
   {
     nome: "London mule",
+    description: "Gin, ginger beer, lime",
     section: SectionTypeEn.cocktail,
     price: "€ 7,00",
   },
-
-   // FRUTTA DESSERT E DIGESTIVI
-   {
-    nome: "Fruit",
-    section: SectionTypeEn.fruttaDessertDigestivi,
-    price: "€ 3,00",
+  {
+    nome: "Tequila sunrise",
+    description: "Tequila, orange juice, granadine",
+    section: SectionTypeEn.cocktail,
+    price: "€ 7,00",
   },
   {
-    nome: "Dessert",
+    nome: "Pina colada",
+    description: "Rum, coconut cream, ananas juice",
+    section: SectionTypeEn.cocktail,
+    price: "€ 7,00",
+  },
+  {
+    nome: "Drink alcohol free",
+    section: SectionTypeEn.cocktail,
+    price: "€ 6,00",
+  },
+
+
+  // FRUTTA DESSERT E DIGESTIVI
+  {
+    nome: "Fruit fruit of your choice",
     section: SectionTypeEn.fruttaDessertDigestivi,
-    price: "€ 3,00",
+    price: "€ 5,00",
+  },
+  {
+    nome: "Mixed",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 5,00",
+  },
+  {
+    nome: "Ice cream",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 4,00",
   },
   {
     nome: "Espresso coffe",

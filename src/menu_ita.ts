@@ -24,8 +24,8 @@ export interface MenuItem {
 
 export enum SectionType {
   // home = "Home",
-  antipastiMare = "Antipasti di mare",
-  antipastiClassici = "Antipasti classici",
+  // antipastiMare = "Antipasti di mare",
+  antipasti = "Antipasti",
   primiPesce = "Primi piatti",
   secondiPesce = "Secondi piatti",
   contorni = "Contorni",
@@ -118,122 +118,95 @@ export function allergeneToPng(allergene: Allergeni) : string | undefined {
 }
 
 export const menuIta: MenuItem[] = [
+
+  // ANTIPASTI
   {
-    nome: "Bon bon di baccalà in pastella",
-    section: SectionType.antipastiMare,
-    price: "€ 10,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi],
+    nome: "Porzione di patatine fritte",
+    section: SectionType.antipasti,
+    price: "€ 3,00",
+  },
+  {
+    nome: "Pane pizza bruschetta",
+    section: SectionType.antipasti,
+    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+    price: "€ 9,00",
+  },
+  {
+    nome: "Bruschetta classica 6pz.",
+    section: SectionType.antipasti,
+    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+    price: "€ 5,00",
+  },
+  {
+    nome: "Antipasto Caldo",
+    section: SectionType.antipasti,
+    description:
+      "Patatine fritte, panelle, crocchè, anelli di cipolla, arancinetta carne, arancinetta burro",
+    price: "€ 5,00",
   },
   {
     nome: "Zuppa di cozze",
-    section: SectionType.antipastiMare,
+    section: SectionType.antipasti,
     price: "€ 10,00",
     allergens: [Allergeni.molluschi],
   },
   {
     nome: "Sautè di molluschi",
-    section: SectionType.antipastiMare,
-    price: "€ 12,00",
+    section: SectionType.antipasti,
+    price: "€ 14,00",
     allergens: [Allergeni.molluschi],
   },
   {
-    nome: "Cocktail di gamberi",
-    section: SectionType.antipastiMare,
-    price: "€ 12,00",
-    allergens: [Allergeni.crostacei, Allergeni.senape],
-  },
-  {
     nome: "Insalata di mare",
-    section: SectionType.antipastiMare,
-    price: "€ 14,00",
+    section: SectionType.antipasti,
+    price: "€ 15,00",
     allergens: [Allergeni.crostacei, Allergeni.molluschi],
   },
   {
-    nome: "Polpo alla piastra su crema di patate",
-    section: SectionType.antipastiMare,
-    price: "€ 14,00",
-    allergens: [Allergeni.latte, Allergeni.sedano, Allergeni.molluschi],
-  },
-  {
-    nome: "Tris di tartare gambero rosa, salmone e ricciola",
-    section: SectionType.antipastiMare,
-    price: "€ 25,00",
-    allergens: [Allergeni.crostacei, Allergeni.pesce],
-  },
-  {
-    nome: "Gamberone di Mazara del Vallo in tempura",
-    section: SectionType.antipastiMare,
-    price: "€ 16,00",
-    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.uova],
-  },
-  {
-    nome: "Gamberone rosso marinato 5pz.",
-    section: SectionType.antipastiMare,
-    price: "€ 16,00",
+    nome: "Tartare di gambero rosso",
+    section: SectionType.antipasti,
+    price: "€ 20,00",
     allergens: [Allergeni.crostacei],
   },
   {
-    nome: "Bruschetta ai ricci 5pz.",
-    section: SectionType.antipastiMare,
+    nome: "Gamberone rosso di Mazara del Vallo marinato 4pz.",
+    section: SectionType.antipasti,
+    price: "€ 20,00",
+    allergens: [Allergeni.crostacei],
+  },
+  {
+    nome: "Bruschetta ai ricci 4pz.",
+    section: SectionType.antipasti,
     price: "€ 20,00",
     allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Ostrica al pz.",
-    section: SectionType.antipastiMare,
-    price: "€ 3,50",
+    section: SectionType.antipasti,
+    price: "€ 3,00",
     allergens: [Allergeni.molluschi],
-  },
-  // {
-  //   nome: "Gamberone rosso di Mazara del Vallo (1° scelta) 4pz.",
-  //   section: SectionType.antipastiMare,
-  //   price: "€ 20,00",
-  // allergens: [Allergeni.crostacei]
-  // },
-  {
-    nome: "Scampone del Mediterraneo (1° scelta) 4pz.",
-    section: SectionType.antipastiMare,
-    price: "€ 20,00",
-    allergens: [Allergeni.crostacei],
   },
   {
     nome: "Cruditè x2",
-    section: SectionType.antipastiMare,
-    price: "€ 50,00",
+    section: SectionType.antipasti,
+    price: "€ 40,00",
     allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi],
   },
+  {
+    nome: "Frittura!",
+    description:"Calamaro, calamaretti, gambero",
+    section: SectionType.antipasti,
+    price: "€ 15,00",
+    allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi],
+  },
+ 
 
-  //ANTIPASTI CLASSICI
-  {
-    nome: "Bruschetta classica 6pz.",
-    section: SectionType.antipastiClassici,
-    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 5,00",
-  },
-  {
-    nome: "Pane pizza bruschetta",
-    section: SectionType.antipastiClassici,
-    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 9,00",
-  },
-  {
-    nome: "Antipasto Caldo",
-    section: SectionType.antipastiClassici,
-    description:
-      "Patatine fritte, panelle, crocchè, anelli di cipolla, arancine carne, arancine burro, mozzarelline",
-    price: "€ 6,00",
-  },
-  {
-    nome: "Porzione di patatine fritte",
-    section: SectionType.antipastiClassici,
-    price: "€ 3,00",
-  },
 
   //PRIMI PIATTI MARE
   {
     nome: "Spaghetti vongole veraci",
     section: SectionType.primiPesce,
-    price: "€ 14,00",
+    price: "€ 15,00",
     allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
@@ -243,70 +216,70 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
-    nome: "Linguine al nero di seppia, ricci e gamberi",
+    nome: "Linguine al nero di seppia, tartare di gambero e ricci",
     section: SectionType.primiPesce,
-    price: "€ 20,00",
+    price: "€ 25,00",
     allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.molluschi],
   },
   {
     nome: "Linguine all'astice",
     section: SectionType.primiPesce,
-    price: "€ 22,00",
+    price: "€ 25,00",
     allergens: [Allergeni.glutine, Allergeni.crostacei],
   },
   {
     nome: "Spaghettone ai ricci",
     section: SectionType.primiPesce,
-    price: "€ 20,00",
+    price: "€ 25,00",
     allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
-    nome: "Paccheri gambero rosso, scampi e pesto di pistacchio",
+    nome: "Paccheri gambero rosso, scampi, pesto di pistacchio e stracciatella di bufala",
     section: SectionType.primiPesce,
-    price: "€ 18,00",
+    price: "€ 22,00",
     allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.fruttaGuscio],
   },
   {
     nome: "Risotto ai frutti di mare",
     section: SectionType.primiPesce,
-    price: "€ 14,00",
+    price: "€ 15,00",
     allergens: [Allergeni.crostacei, Allergeni.uova, Allergeni.molluschi],
   },
-  {
-  nome: "Norma",
-  description: "Ravioli ripieni di melenzana, salsa di pomodoro fresco, crema di ricotta salata",
-  section: SectionType.primiPesce,
-  price: "€ 12,00",
-  // allergens: [Allergeni.glutine, Allergeni.latte],
-},
-
 
 
   //SECONDI DI PESCE
+  
   {
-    nome: "Gamberone rosso di Mazara del Vallo 4pz.",
+    nome: "Polpo grill su crema di patate alla paprika",
+    section: SectionType.secondiPesce,
+    price: "€ 14,00",
+    allergens: [Allergeni.crostacei],
+  },
+  {
+    nome: "Gamberone rosso di Mazara del Vallo grill 4pz.",
     section: SectionType.secondiPesce,
     price: "€ 20,00",
     allergens: [Allergeni.crostacei],
   },
   {
-    nome: "Scamponi del Mar Mediterraneo (1° scelta) 4pz.",
+    nome: "Sautè di gamberone rosso di Mazara del Vallo 4pz.",
     section: SectionType.secondiPesce,
     price: "€ 20,00",
     allergens: [Allergeni.crostacei],
   },
   {
-    nome: "Aragosta",
+    nome: "Pesce spada alla palermitana rivisitato",
     section: SectionType.secondiPesce,
-    price: "€ 12,00/etto",
-    allergens: [Allergeni.crostacei],
-  },
-  {
-    nome: "Pescato locale del giorno (esposto in vetrina)",
-    section: SectionType.secondiPesce,
-    price: "€ 7,00/etto",
+    price: "€ 15,00",
     allergens: [Allergeni.pesce],
   },
+  {
+    nome: "Filetto di manzo grill",
+    section: SectionType.secondiPesce,
+    price: "€ 18,00",
+  },
+  
+
 
   //CONTORNI
   {
@@ -322,7 +295,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Insalata estiva",
     section: SectionType.contorni,
-    price: "€ 4,00"
+    price: "€ 6,00"
 
   },
 
@@ -715,14 +688,14 @@ export const menuIta: MenuItem[] = [
 
   //BIBITE
   {
-    nome: "Acqua  naturale 0,75cl.",
+    nome: "Acqua  naturale in vetro 0,75cl.",
     section: SectionType.bibite,
-    price: "€ 2,00",
+    price: "€ 2,50",
   },
   {
-    nome: "Acqua  frizzante 0,75cl.",
+    nome: "Acqua  frizzante in vetro 0,75cl.",
     section: SectionType.bibite,
-    price: "€ 2,00",
+    price: "€ 2,50",
   },
   {
     nome: "Coca cola in vetro 33cl.",
@@ -747,7 +720,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Sprite in vetro 33cl.",
     section: SectionType.bibite,
-    price: "€ 2,50",
+    price: "€ 3,00",
   },
   {
     nome: "Chinotto S. Pellegrino 33cl.",
@@ -765,41 +738,27 @@ export const menuIta: MenuItem[] = [
     price: "€ 2,00",
   },
   {
-    nome: "The limone San Benedetto 33cl.",
+    nome: "Schweppes lemon 33cl.",
     section: SectionType.bibite,
-    price: "€ 2,00",
+    price: "€ 2,50",
   },
+  {
+    nome: "Schweppes tonic 33cl.",
+    section: SectionType.bibite,
+    price: "€ 2,50",
+  },
+ 
 
   //BIRRE CLASSICHE
   {
-    nome: "Heineken 33cl.",
-    section: SectionType.birre,
-    price: "€ 3,00",
+    nome: "Alla spina 0,20cl.",
+     section: SectionType.birre,
+     price: "€ 3,00",
   },
   {
-    nome: "Heineken 66cl.",
-    section: SectionType.birre,
-    price: "€ 4,00",
-  },
-  {
-    nome: "Beck's 33cl.",
-    section: SectionType.birre,
-    price: "€ 3,00",
-  },
-  {
-    nome: "Beck's 66cl.",
-    section: SectionType.birre,
-    price: "€ 4,00",
-  },
-  {
-    nome: "Moretti  33cl.",
-    section: SectionType.birre,
-    price: "€ 2,00",
-  },
-  {
-    nome: "Moretti 66cl.",
-    section: SectionType.birre,
-    price: "€ 3,00",
+    nome: "Alla spina 0,40cl.",
+     section: SectionType.birre,
+     price: "€ 5,00",
   },
    {
     nome: "Messina ai cristalli di sale 50cl.",
@@ -1091,7 +1050,19 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Negroni",
     section: SectionType.cocktail,
-    description: "Gin, Campari, Vermouth rosso",
+    description: "Gin, Campari, Martini rosso",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Negroni sbagliato",
+    section: SectionType.cocktail,
+    description: "Spumante, Campari, Martini rosso",
+    price: "€ 7,00",
+  },
+  {
+    nome: "Negrowski",
+    section: SectionType.cocktail,
+    description: "Vodka, Campari, Martini",
     price: "€ 7,00",
   },
   {
@@ -1132,7 +1103,7 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Moscow mule",
     section: SectionType.cocktail,
-    description: "Vodka, ginger beer, succo di limone",
+    description: "Vodka, ginger beer, succo di lime",
     price: "€ 7,00",
   },
   {
@@ -1149,24 +1120,48 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Americano",
     section: SectionType.cocktail,
+    description: "Martini rosso, Campari, soda",
     price: "€ 7,00",
   },
   {
     nome: "London mule",
+    description: "Gin, ginger beer, lime",
     section: SectionType.cocktail,
     price: "€ 7,00",
   },
-
-  // FRUTTA DESSERT E DIGESTIVI
   {
-    nome: "Frutta",
-    section: SectionType.fruttaDessertDigestivi,
-    price: "€ 3,00",
+    nome: "Tequila sunrise",
+    description: "Tequila, succo d'arancia, granatina",
+    section: SectionType.cocktail,
+    price: "€ 7,00",
   },
   {
-    nome: "Dessert",
+    nome: "Pina colada",
+    description: "Rum, crema di cocco, succo d'ananas",
+    section: SectionType.cocktail,
+    price: "€ 7,00",
+  },
+  {
+    nome: "Analcolico",
+    section: SectionType.cocktail,
+    price: "€ 6,00",
+  },
+  
+  // FRUTTA DESSERT E DIGESTIVI
+  {
+    nome: "Frutta a scelta",
     section: SectionType.fruttaDessertDigestivi,
-    price: "€ 3,00",
+    price: "€ 5,00",
+  },
+  {
+    nome: "Frutta mista",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 5,00",
+  },
+  {
+    nome: "Gelato",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 4,00",
   },
   {
     nome: "Caffè",
