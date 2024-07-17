@@ -274,6 +274,12 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.pesce],
   },
   {
+    nome: "Calamaro grill",
+    section: SectionType.secondiPesce,
+    price: "€ 14,00",
+    allergens: [Allergeni.pesce],
+  },
+  {
     nome: "Filetto di manzo grill",
     section: SectionType.secondiPesce,
     price: "€ 18,00",
@@ -1202,5 +1208,10 @@ export const menuIta: MenuItem[] = [
     nome: "Sambuca",
     section: SectionType.fruttaDessertDigestivi,
     price: "€ 3,00",
+  },
+  {
+    nome: "Grappa 903",
+    section: SectionType.fruttaDessertDigestivi,
+    price: "€ 5,00",
   },
 ];

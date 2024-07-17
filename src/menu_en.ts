@@ -284,11 +284,16 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.pesce],
   },
   {
-    nome: "Grill beef fillet",
+    nome: "Grilled squid",
+    section: SectionTypeEn.secondiPesce,
+    price: "€ 14,00",
+  },
+  {
+    nome: "Grilled beef fillet",
     section: SectionTypeEn.secondiPesce,
     price: "€ 18,00",
-    allergens: [AllergeniEn.pesce],
   },
+  
 
 
   //CONTORNI
@@ -1204,5 +1209,10 @@ export const menuEnglish: MenuItem[] = [
     nome: "Sambuca",
     section: SectionTypeEn.fruttaDessertDigestivi,
     price: "€ 3,00",
+  },
+  {
+    nome: "Grappa 903",
+    section: SectionTypeEn.fruttaDessertDigestivi,
+    price: "€ 5,00",
   },
 ];
