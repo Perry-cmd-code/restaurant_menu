@@ -270,6 +270,7 @@ function App() {
               </div>
             )}
           </div>
+          {filter == SectionType.secondiPesce && <p style={{width: "100%", textAlign: "right", paddingTop: "10px", margin:"0"}}>Tutti i secondi verranno accompagnati da un'insalatina croccante</p>}
           <i style={{width: "100%", textAlign: "right", paddingTop: "10px"}}>Coperto € 2,00</i>
         </div>
       ) : (
@@ -484,6 +485,7 @@ function App() {
               </div>
             )}
           </div>
+          {filter == SectionTypeEn.secondiPesce && <p style={{width: "100%", textAlign: "right", paddingTop: "10px", margin: "0"}}>Tutti i secondi verranno accompagnati da un'insalatina croccante</p>}
           <i style={{width: "100%", textAlign: "right", paddingTop: "10px"}}>Cover charge € 2,00</i>
         </div>
       )}

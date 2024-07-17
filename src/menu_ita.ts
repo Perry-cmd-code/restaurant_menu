@@ -738,6 +738,11 @@ export const menuIta: MenuItem[] = [
     price: "€ 2,00",
   },
   {
+    nome: "The limone San Benedetto 33cl.",
+    section: SectionType.bibite,
+    price: "€ 2,00",
+  },
+  {
     nome: "Schweppes lemon 33cl.",
     section: SectionType.bibite,
     price: "€ 2,50",
@@ -1060,7 +1065,7 @@ export const menuIta: MenuItem[] = [
     price: "€ 7,00",
   },
   {
-    nome: "Negrowski",
+    nome: "Negroski",
     section: SectionType.cocktail,
     description: "Vodka, Campari, Martini",
     price: "€ 7,00",

@@ -1066,7 +1066,7 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 7,00"
   },
   {
-    nome: "Negrowski",
+    nome: "Negroski",
     section: SectionTypeEn.cocktail,
     description: "Vodka, Campari, Martini",
     price: "€ 7,00",
