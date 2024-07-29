@@ -130,14 +130,14 @@ export const menuEnglish: MenuItem[] = [
     nome: "Classic bruschetta 6pieces.",
     section: SectionTypeEn.antipasti,
     description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-    price: "€ 5,00",
+    price: "€ 6,00",
   },
   {
     nome: "Antipasto Caldo",
     section: SectionTypeEn.antipasti,
     description:
       "French fries, panelle, crocchè, onion rings, meat arancine, butter and ham arancine",
-    price: "€ 5,00",
+    price: "€ 7,00",
   },
 
   {
@@ -703,12 +703,12 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Still water 0,75 cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 2,50",
+    price: "€ 3,00",
   },
   {
     nome: "Sparkling water 0,75 cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 2,50",
+    price: "€ 3,00",
   },
   {
     nome: "Coca cola in glass bottle 33cl.",
@@ -716,14 +716,9 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 3,50",
   },
   {
-    nome: "Coca cola zero in glass bottle 33cò.",
+    nome: "Coca cola zero in glass bottle 33cl.",
     section: SectionTypeEn.bibite,
     price: "€ 3,50",
-  },
-  {
-    nome: "Coca cola in glass bottle 1lt.",
-    section: SectionTypeEn.bibite,
-    price: "€ 4,50",
   },
   {
     nome: "Fanta in glass bottle 33cl.",

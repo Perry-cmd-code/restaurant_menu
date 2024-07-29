@@ -135,14 +135,14 @@ export const menuIta: MenuItem[] = [
     nome: "Bruschetta classica 6pz.",
     section: SectionType.antipasti,
     description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 5,00",
+    price: "€ 6,00",
   },
   {
     nome: "Antipasto Caldo",
     section: SectionType.antipasti,
     description:
       "Patatine fritte, panelle, crocchè, anelli di cipolla, arancinetta carne, arancinetta burro",
-    price: "€ 5,00",
+    price: "€ 7,00",
   },
   {
     nome: "Zuppa di cozze",
@@ -169,7 +169,7 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.crostacei],
   },
   {
-    nome: "Gamberone rosso di Mazara del Vallo marinato 4pz.",
+    nome: "Gamberone rosso marinato di Mazara del Vallo 4pz.",
     section: SectionType.antipasti,
     price: "€ 20,00",
     allergens: [Allergeni.crostacei],
@@ -362,7 +362,7 @@ export const menuIta: MenuItem[] = [
   },
   {
     nome: "Diavola",
-    description: "Pomodoro, fiordilatte campana, cipolla e salamino piccante",
+    description: "Pomodoro, fiordilatte campana, cipolla, salamino piccante",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
     price: "€ 8,00",
@@ -686,7 +686,7 @@ export const menuIta: MenuItem[] = [
   //   },
   {
     nome: "Pescatore",
-    description: "Pomodoro e frutti di mare",
+    description: "Pomodoro, frutti di mare",
     section: SectionType.pizzeria,
     subSection: SubSectionType.pizzeClassiche,
     price: "€ 16,00",
@@ -696,12 +696,12 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Acqua  naturale in vetro 0,75cl.",
     section: SectionType.bibite,
-    price: "€ 2,50",
+    price: "€ 3,00",
   },
   {
     nome: "Acqua  frizzante in vetro 0,75cl.",
     section: SectionType.bibite,
-    price: "€ 2,50",
+    price: "€ 3,00",
   },
   {
     nome: "Coca cola in vetro 33cl.",
@@ -712,11 +712,6 @@ export const menuIta: MenuItem[] = [
     nome: "Coca cola zero in vetro 33cl.",
     section: SectionType.bibite,
     price: "€ 3,00",
-  },
-  {
-    nome: "Coca cola in vetro 1lt.",
-    section: SectionType.bibite,
-    price: "€ 4,50",
   },
   {
     nome: "Fanta in vetro 33cl.",
