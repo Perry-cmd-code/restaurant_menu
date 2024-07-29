@@ -166,7 +166,7 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.crostacei],
   },
   {
-    nome: "Marinated red shrimps  from Mazara del Vallo 4pieces",
+    nome: "Marinated red shrimps from Mazara del Vallo 4pieces",
     section: SectionTypeEn.antipasti,
     price: "€ 20,00",
     allergens: [AllergeniEn.crostacei],
@@ -280,7 +280,7 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Palermo-style swordfish revisited",
     section: SectionTypeEn.secondiPesce,
-    price: "€ 25,00",
+    price: "€ 15,00",
     allergens: [AllergeniEn.pesce],
   },
   {
@@ -713,12 +713,12 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Coca cola in glass bottle 33cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 3,50",
+    price: "€ 3,00",
   },
   {
     nome: "Coca cola zero in glass bottle 33cl.",
     section: SectionTypeEn.bibite,
-    price: "€ 3,50",
+    price: "€ 3,00",
   },
   {
     nome: "Fanta in glass bottle 33cl.",
@@ -936,13 +936,7 @@ export const menuEnglish: MenuItem[] = [
     subSection: SubSectionTypeEn.vinoBiancoJato,
     price: "€ 18,00",
   },
-  {
-    nome: "Pinot grigio",
-    description: "Bottle 75 cl.",
-    section: SectionTypeEn.vini,
-    subSection: SubSectionTypeEn.vinoBiancoJato,
-    price: "€ 20,00",
-  },
+
 
   //  VINI ROSSi
   {
@@ -959,13 +953,7 @@ export const menuEnglish: MenuItem[] = [
     subSection: SubSectionTypeEn.vinoRossoJato,
     price: "€ 18,00",
   },
-  {
-    nome: "Etna rosso",
-    description: "Bottle 75 cl.",
-    section: SectionTypeEn.vini,
-    subSection: SubSectionTypeEn.vinoRossoJato,
-    price: "€ 25,00",
-  },
+
   {
     nome: "Frappato IGP terre siciliane",
     description: "Bottle 75 cl.",
@@ -1001,13 +989,7 @@ export const menuEnglish: MenuItem[] = [
     subSection: SubSectionTypeEn.vinoRossoJato,
     price: "€ 18,00",
   },
-  {
-    nome: "Syrah firritato IGP terre siciliane",
-    description: "Bottle 75 cl.",
-    section: SectionTypeEn.vini,
-    subSection: SubSectionTypeEn.vinoRossoJato,
-    price: "€ 25,00",
-  },
+
 
   // SPUMANTI
   {
@@ -1034,6 +1016,11 @@ export const menuEnglish: MenuItem[] = [
     nome: "Bellavista Blanc",
     section: SectionTypeEn.spumanti,
     price: "€ 50,00",
+  },
+  {
+    nome: "Tenute dello Jato brut",
+    section: SectionTypeEn.spumanti,
+    price: "€ 20,00",
   },
 
   // CHAMPAGNE
@@ -1161,7 +1148,7 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 5,00",
   },
   {
-    nome: "Mixed",
+    nome: "Mixed fruits",
     section: SectionTypeEn.fruttaDessertDigestivi,
     price: "€ 5,00",
   },
@@ -1170,6 +1157,11 @@ export const menuEnglish: MenuItem[] = [
     section: SectionTypeEn.fruttaDessertDigestivi,
     price: "€ 4,00",
   },
+  // {
+  //   nome: "Dessert",
+  //   section: SectionTypeEn.fruttaDessertDigestivi,
+  //   price: "€ 5,00",
+  // },
   {
     nome: "Espresso coffe",
     section: SectionTypeEn.fruttaDessertDigestivi,

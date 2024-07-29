@@ -929,13 +929,7 @@ export const menuIta: MenuItem[] = [
        subSection: SubSectionType.vinoBiancoJato,
        price: "€ 18,00",
      },
-     {
-      nome: "Pinot grigio",
-       description: "Bottiglia 75 cl.",
-       section: SectionType.vini,
-       subSection: SubSectionType.vinoBiancoJato,
-       price: "€ 20,00",
-     },
+ 
 
      //VINI ROSSI
 
@@ -952,13 +946,6 @@ export const menuIta: MenuItem[] = [
        section: SectionType.vini,
        subSection: SubSectionType.vinoRossoJato,
        price: "€ 18,00",
-     },
-     {
-      nome: "Etna rosso",
-       description: "Bottiglia 75 cl.",
-       section: SectionType.vini,
-       subSection: SubSectionType.vinoRossoJato,
-       price: "€ 25,00",
      },
      {
       nome: "Frappato IGP terre siciliane",
@@ -995,13 +982,7 @@ export const menuIta: MenuItem[] = [
        subSection: SubSectionType.vinoRossoJato,
        price: "€ 18,00",
      },
-     {
-      nome: "Syrah firritato IGP terre siciliane",
-       description: "Bottiglia 75 cl.",
-       section: SectionType.vini,
-       subSection: SubSectionType.vinoRossoJato,
-       price: "€ 25,00",
-     },
+
 
   // SPUMANTI
   {
@@ -1169,6 +1150,11 @@ export const menuIta: MenuItem[] = [
     section: SectionType.fruttaDessertDigestivi,
     price: "€ 4,00",
   },
+  // {
+  //   nome: "Dessert",
+  //   section: SectionType.fruttaDessertDigestivi,
+  //   price: "€ 5,00",
+  // },
   {
     nome: "Caffè",
     section: SectionType.fruttaDessertDigestivi,
