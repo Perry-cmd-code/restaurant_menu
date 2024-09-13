@@ -141,7 +141,7 @@ export const menuIta: MenuItem[] = [
     nome: "Antipasto Caldo",
     section: SectionType.antipasti,
     description:
-      "Patatine fritte, panelle, crocchè, anelli di cipolla, arancinetta carne, arancinetta burro",
+      "Patatine fritte, panelle, crocchè, anelli di cipolla, arancinetta carne, arancinetta burro, mozzarellina in carrozza",
     price: "€ 7,00",
   },
   {
@@ -199,6 +199,13 @@ export const menuIta: MenuItem[] = [
     price: "€ 15,00",
     allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi],
   },
+  {
+    nome: "Cocktail di gamberi",
+    section: SectionType.antipasti,
+    price: "€ 12,00",
+    allergens: [],
+  },
+ 
  
 
 
@@ -280,11 +287,20 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.pesce],
   },
   {
+    nome: "Pesce spada grill",
+    section: SectionType.secondiPesce,
+    price: "€ 15,00",
+  },
+  {
+    nome: "Trinca grill",
+    section: SectionType.secondiPesce,
+    price: "€ 18,00",
+  },
+  {
     nome: "Filetto di manzo grill",
     section: SectionType.secondiPesce,
     price: "€ 18,00",
   },
-  
 
 
   //CONTORNI
@@ -787,6 +803,41 @@ export const menuIta: MenuItem[] = [
     section: SectionType.birre,
     price: "€ 4,00",
   },
+  
+  {
+    nome: "Moretti 66cl.",
+    section: SectionType.birre,
+    price: "€ 3,50",
+  },
+  
+  {
+    nome: "Heineken 66cl.",
+    section: SectionType.birre,
+    price: "€ 4,00",
+  },
+  
+  {
+    nome: "Beck's 66cl.",
+    section: SectionType.birre,
+    price: "€ 4,00",
+  },
+  
+  {
+    nome: "Moretti 33cl.",
+    section: SectionType.birre,
+    price: "€ 2,50",
+  },
+  {
+    nome: "Heineken 33cl.",
+    section: SectionType.birre,
+    price: "€ 3,00",
+  },
+  
+  {
+    nome: "Beck's 3cl.",
+    section: SectionType.birre,
+    price: "€ 3,00",
+  },
 
   //VINI BIANCHI
   {
@@ -795,36 +846,36 @@ export const menuIta: MenuItem[] = [
     section: SectionType.vini,
     price: "€ 24,00",
   },
-  {
-    nome: "Charme bianco",
-    description: "Calice",
-    section: SectionType.vini,
-    price: "€ 7,00",
-  },
+  // {
+  //   nome: "Charme bianco",
+  //   description: "Calice",
+  //   section: SectionType.vini,
+  //   price: "€ 7,00",
+  // },
   {
     nome: "Charme rosè",
     description: "Bottiglia 75 cl.",
     section: SectionType.vini,
     price: "€ 25,00",
   },
-  {
-    nome: "Charme rosè",
-    description: "Calice",
-    section: SectionType.vini,
-    price: "€ 8,00",
-  },
+  // {
+  //   nome: "Charme rosè",
+  //   description: "Calice",
+  //   section: SectionType.vini,
+  //   price: "€ 8,00",
+  // },
   {
     nome: "Angimbé Cusumano",
     description: "Bottiglia 75 cl.",
     section: SectionType.vini,
     price: "€ 20,00",
   },
-  {
-    nome: "Angimbé Cusumano",
-    description: "Calice",
-    section: SectionType.vini,
-    price: "€ 6,00",
-  },
+  // {
+  //   nome: "Angimbé Cusumano",
+  //   description: "Calice",
+  //   section: SectionType.vini,
+  //   price: "€ 6,00",
+  // },
 
   {
     nome: "Bianco di Nera",
@@ -832,12 +883,12 @@ export const menuIta: MenuItem[] = [
     section: SectionType.vini,
     price: "€ 24,00",
   },
-  {
-    nome: "Bianco di Nera",
-    description: "Calice",
-    section: SectionType.vini,
-    price: "€ 6,00",
-  },
+  // {
+  //   nome: "Bianco di Nera",
+  //   description: "Calice",
+  //   section: SectionType.vini,
+  //   price: "€ 6,00",
+  // },
   // {
   //   nome: "Grillo",
   //   description: "Bottiglia 75 cl.",
@@ -857,12 +908,12 @@ export const menuIta: MenuItem[] = [
     section: SectionType.vini,
     price: "€ 32,00",
   },
-  {
-    nome: "Maria Costanza",
-    description: "Calice",
-    section: SectionType.vini,
-    price: "€ 9,00",
-  },
+  // {
+  //   nome: "Maria Costanza",
+  //   description: "Calice",
+  //   section: SectionType.vini,
+  //   price: "€ 9,00",
+  // },
   // {
   //   nome: "Rapitalà",
   //   description: "Bottiglia 75 cl.",
@@ -894,13 +945,13 @@ export const menuIta: MenuItem[] = [
        subSection: SubSectionType.vinoBiancoJato,
        price: "€ 20,00",
      },
-     {
-      nome: "Al mio amico Grillo DOC Sicilia",
-       description: "Bottiglia 75 cl.",
-       section: SectionType.vini,
-       subSection: SubSectionType.vinoBiancoJato,
-       price: "€ 20,00",
-     },
+    //  {
+    //   nome: "Al mio amico Grillo DOC Sicilia",
+    //    description: "Bottiglia 75 cl.",
+    //    section: SectionType.vini,
+    //    subSection: SubSectionType.vinoBiancoJato,
+    //    price: "€ 20,00",
+    //  },
      {
       nome: "Catarratto IGP terre siciliane",
        description: "Bottiglia 75 cl.",
