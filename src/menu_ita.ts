@@ -205,6 +205,43 @@ export const menuIta: MenuItem[] = [
     price: "€ 12,00",
     allergens: [],
   },
+  {
+    nome: "Gambero in tempura in crosta di panko 4pz.",
+    section: SectionType.antipasti,
+    price: "€ 18,00",
+    allergens: [],
+  },
+  {
+    nome: "Polpo alla catalana su crema di patate, cipolla in agrodolce e pomodorino confit",
+    section: SectionType.antipasti,
+    price: "€ 13,00",
+    allergens: [],
+  },
+  {
+    nome: "Baccalà fritto",
+    section: SectionType.antipasti,
+    price: "€ 10,00",
+    allergens: [],
+  },
+  {
+    nome: "Caponata di pesce spada",
+    section: SectionType.antipasti,
+    price: "€ 10,00",
+    allergens: [],
+  },
+  {
+    nome: "Caponata siciliana",
+    section: SectionType.antipasti,
+    price: "€ 7,00",
+    allergens: [],
+  },
+  {
+    nome: "Sarde a beccafico con gel di agrumi siciliani 5pz.",
+    section: SectionType.antipasti,
+    price: "€ 10,00",
+    allergens: [],
+  },
+ 
  
  
 
@@ -252,7 +289,54 @@ export const menuIta: MenuItem[] = [
     price: "€ 15,00",
     allergens: [Allergeni.crostacei, Allergeni.uova, Allergeni.molluschi],
   },
-
+  {
+    nome: "Linguine alla nerano di polpo con zucchina croccante",
+    section: SectionType.primiPesce,
+    price: "€ 13,00",
+    allergens: [],
+  },
+  {
+    nome: "Lido ci voleva",
+    section: SectionType.primiPesce,
+    price: "€ 14,00",
+    allergens: [],
+  },
+  {
+    nome: "Cavatelli cozze patate e polvere di paprika affumicata",
+    section: SectionType.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Scialaltello crema di zucca rossa e gambero rosso locale",
+    section: SectionType.primiPesce,
+    price: "€ 18,00",
+    allergens: [],
+  },
+  {
+    nome: "Spaghetto triglia e finocchietto",
+    section: SectionType.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Spaghetto con ragù di maialino e chenelle di ricotta fresca siciliana",
+    section: SectionType.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Risotto con crema di zucca rossa, speck croccante e salsa verde",
+    section: SectionType.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Pacchero pistacchioso con guanciale, stracciatella di bufala e pesto di pistacchio",
+    section: SectionType.primiPesce,
+    price: "€ 16,00",
+    allergens: [],
+  },
 
   //SECONDI DI PESCE
   
@@ -292,6 +376,21 @@ export const menuIta: MenuItem[] = [
     price: "€ 15,00",
   },
   {
+    nome: "Parmigiana di pesce spada con gel di pomodoro e stracciatella di bufala",
+    section: SectionType.secondiPesce,
+    price: "€ 13,00",
+  },
+  {
+    nome: "Zuppa mediterranea in guazzetto",
+    section: SectionType.secondiPesce,
+    price: "€ 22,00",
+  },
+  {
+    nome: "Orata alla griglia con contorno di patate al forno",
+    section: SectionType.secondiPesce,
+    price: "€ 16,00",
+  },
+  {
     nome: "Trinca grill",
     section: SectionType.secondiPesce,
     price: "€ 18,00",
@@ -301,6 +400,7 @@ export const menuIta: MenuItem[] = [
     section: SectionType.secondiPesce,
     price: "€ 18,00",
   },
+  
 
 
   //CONTORNI

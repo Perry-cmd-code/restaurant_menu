@@ -211,7 +211,42 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 12,00",
     allergens: [],
   },
- 
+  {
+    nome: "Panko crusted shrimp tempura 4pieces",
+    section: SectionTypeEn.antipasti,
+    price: "€ 18,00",
+    allergens: [],
+  },
+  {
+    nome: "Catalan-style octopus on potato cream, sweet and sour onion and confit cherry tomato",
+    section: SectionTypeEn.antipasti,
+    price: "€ 13,00",
+    allergens: [],
+  },
+  {
+    nome: "Fried cod",
+    section: SectionTypeEn.antipasti,
+    price: "€ 10,00",
+    allergens: [],
+  },
+  {
+    nome: "Swordfish caponata",
+    section: SectionTypeEn.antipasti,
+    price: "€ 10,00",
+    allergens: [],
+  },
+  {
+    nome: "Sicilian caponata",
+    section: SectionTypeEn.antipasti,
+    price: "€ 7,00",
+    allergens: [],
+  },
+  {
+    nome: "Beccafico sardines with Sicilian citrus fruit gel 5pieces",
+    section: SectionTypeEn.antipasti,
+    price: "€ 10,00",
+    allergens: [],
+  },
 
   
   //PRIMI PIATTI MARE
@@ -265,6 +300,54 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 15,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.uova, AllergeniEn.molluschi],
   },
+  {
+    nome: "Octopus linguine with crunchy courgettee",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 13,00",
+    allergens: [],
+  },
+  {
+    nome: "Lido ci voleva",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 14,00",
+    allergens: [],
+  },
+  {
+    nome: "Cavatelli mussels, potatoes and smoked paprika powder",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Scialaltello cream of red pumpkin and local red prawn",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 18,00",
+    allergens: [],
+  },
+  {
+    nome: "Spaghetti red mullet and fennel",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Spaghetti with pork ragout and fresh Sicilian ricotta chenelle",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Risotto with red pumpkin cream, crunchy speck and green sauce",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Pacchero with bacon, buffalo stracciatella and pistachio pesto",
+    section: SectionTypeEn.primiPesce,
+    price: "€ 16,00",
+    allergens: [],
+  },
 
   //SECONDI DI PESCE
   {
@@ -300,6 +383,21 @@ export const menuEnglish: MenuItem[] = [
     nome: "Grilled swordfish",
     section: SectionTypeEn.secondiPesce,
     price: "€ 15,00",
+  },
+  {
+    nome: "Swordfish parmigiana with tomato gel and buffalo stracciatella",
+    section: SectionTypeEn.secondiPesce,
+    price: "€ 13,00",
+  },
+  {
+    nome: "Mediterranean stew soup",
+    section: SectionTypeEn.secondiPesce,
+    price: "€ 22,00",
+  },
+  {
+    nome: "Grilled sea bream with a side of baked potatoes",
+    section: SectionTypeEn.secondiPesce,
+    price: "€ 16,00",
   },
   {
     nome: "Grilled trinch",
