@@ -26,8 +26,8 @@ export enum SectionType {
   // home = "Home",
   // antipastiMare = "Antipasti di mare",
   antipasti = "Antipasti",
-  primiPesce = "Primi piatti",
-  secondiPesce = "Secondi piatti",
+  primiPiatti = "Primi piatti",
+  secondiPiatti = "Secondi piatti",
   contorni = "Contorni",
   pizzeria = "Pizzeria",
   bibite = "Bibite",
@@ -45,7 +45,17 @@ export enum SubSectionType {
   pizzeBufala = "Pizze con Bufala DOP",
 
   vinoBiancoJato = "Vini bianchi Tenuto dello Jato",
-  vinoRossoJato = "Vini rossi Tenuto dello Jato"
+  vinoRossoJato = "Vini rossi Tenuto dello Jato",
+
+  antipasti = "Antipasti",
+  antipastiMare = "Antipasti di mare",
+
+  primiPiatti = "Primi piatti",
+  primiPiattiMare = "Primi piatti di mare",
+
+  secondiPiatti = "Secondi piatti",
+  secondiPiattiMare= "Secondi piatti di mare"
+
 
   // spumanti = "Spumanti",
   // champagne = "Champagne",
@@ -123,72 +133,98 @@ export const menuIta: MenuItem[] = [
   {
     nome: "Porzione di patatine fritte",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipasti,
     price: "€ 3,00",
-  },
-  {
-    nome: "Pane pizza bruschetta",
-    section: SectionType.antipasti,
-    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 9,00",
-  },
-  {
-    nome: "Bruschetta classica 6pz.",
-    section: SectionType.antipasti,
-    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
-    price: "€ 6,00",
   },
   {
     nome: "Antipasto Caldo",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipasti,
     description:
       "Patatine fritte, panelle, crocchè, anelli di cipolla, arancinetta carne, arancinetta burro, mozzarellina in carrozza",
+    price: "€ 6,00",
+  },
+  {
+    nome: "Bruschetta classica 6pz.",
+    section: SectionType.antipasti,
+    subSection: SubSectionType.antipasti,
+    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+    price: "€ 6,00",
+  },
+  {
+    nome: "Pane pizza bruschetta",
+    section: SectionType.antipasti,
+    subSection: SubSectionType.antipasti,
+    description: "Pomodoro fresco, aglio, basilico, olio, sale, pepe, origano",
+    price: "€ 9,00",
+  },
+  {
+    nome: "Caponata siciliana",
+    section: SectionType.antipasti,
+    subSection: SubSectionType.antipasti,
     price: "€ 7,00",
+    allergens: [],
   },
   {
     nome: "Zuppa di cozze",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 10,00",
+    allergens: [Allergeni.molluschi],
+  },
+  {
+    nome: "Impepata di cozze",
+    section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
+    price: "€ 8,00",
     allergens: [Allergeni.molluschi],
   },
   {
     nome: "Sautè di molluschi",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 14,00",
     allergens: [Allergeni.molluschi],
   },
   {
     nome: "Insalata di mare",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 15,00",
     allergens: [Allergeni.crostacei, Allergeni.molluschi],
   },
   {
     nome: "Tartare di gambero rosso",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 20,00",
     allergens: [Allergeni.crostacei],
   },
   {
     nome: "Gamberone rosso marinato di Mazara del Vallo 4pz.",
     section: SectionType.antipasti,
-    price: "€ 20,00",
+    subSection: SubSectionType.antipastiMare,
+    price: "€ 18,00",
     allergens: [Allergeni.crostacei],
   },
   {
     nome: "Bruschetta ai ricci 4pz.",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 20,00",
     allergens: [Allergeni.glutine, Allergeni.molluschi],
   },
   {
     nome: "Ostrica al pz.",
     section: SectionType.antipasti,
-    price: "€ 3,00",
+    subSection: SubSectionType.antipastiMare,
+    price: "€ 3,50",
     allergens: [Allergeni.molluschi],
   },
   {
     nome: "Cruditè x2",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 40,00",
     allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi],
   },
@@ -196,210 +232,272 @@ export const menuIta: MenuItem[] = [
     nome: "Frittura!",
     description:"Calamaro, calamaretti, gambero",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 15,00",
     allergens: [Allergeni.crostacei, Allergeni.pesce, Allergeni.molluschi],
   },
   {
     nome: "Cocktail di gamberi",
     section: SectionType.antipasti,
-    price: "€ 12,00",
+    subSection: SubSectionType.antipastiMare,
+    price: "€ 10,00",
     allergens: [],
   },
   {
     nome: "Gambero in tempura in crosta di panko 4pz.",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 18,00",
-    allergens: [],
-  },
-  {
-    nome: "Polpo alla catalana su crema di patate, cipolla in agrodolce e pomodorino confit",
-    section: SectionType.antipasti,
-    price: "€ 13,00",
     allergens: [],
   },
   {
     nome: "Baccalà fritto",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 10,00",
     allergens: [],
   },
   {
     nome: "Caponata di pesce spada",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 10,00",
     allergens: [],
   },
+ 
   {
-    nome: "Caponata siciliana",
+    nome: "Sarde a beccafico con gel di agrumi siciliani 5pz.",
     section: SectionType.antipasti,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 7,00",
     allergens: [],
   },
   {
-    nome: "Sarde a beccafico con gel di agrumi siciliani 5pz.",
+    nome: "Polpo alla catalana su crema di patate, cipolla in agrodolce e pomodorino confit",
     section: SectionType.antipasti,
-    price: "€ 10,00",
-    allergens: [],
-  },
- 
- 
- 
-
-
-  //PRIMI PIATTI MARE
-  {
-    nome: "Spaghetti vongole veraci",
-    section: SectionType.primiPesce,
-    price: "€ 15,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi],
-  },
-  {
-    nome: "Linguine al nero di seppia",
-    section: SectionType.primiPesce,
-    price: "€ 15,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi],
-  },
-  {
-    nome: "Linguine al nero di seppia, tartare di gambero e ricci",
-    section: SectionType.primiPesce,
-    price: "€ 25,00",
-    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.molluschi],
-  },
-  {
-    nome: "Linguine all'astice",
-    section: SectionType.primiPesce,
-    price: "€ 25,00",
-    allergens: [Allergeni.glutine, Allergeni.crostacei],
-  },
-  {
-    nome: "Spaghettone ai ricci",
-    section: SectionType.primiPesce,
-    price: "€ 25,00",
-    allergens: [Allergeni.glutine, Allergeni.molluschi],
-  },
-  {
-    nome: "Paccheri gambero rosso, scampi, pesto di pistacchio e stracciatella di bufala",
-    section: SectionType.primiPesce,
-    price: "€ 22,00",
-    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.fruttaGuscio],
-  },
-  {
-    nome: "Risotto ai frutti di mare",
-    section: SectionType.primiPesce,
-    price: "€ 15,00",
-    allergens: [Allergeni.crostacei, Allergeni.uova, Allergeni.molluschi],
-  },
-  {
-    nome: "Linguine alla nerano di polpo con zucchina croccante",
-    section: SectionType.primiPesce,
+    subSection: SubSectionType.antipastiMare,
     price: "€ 13,00",
     allergens: [],
   },
+ 
+ 
+ 
+
+
+  //PRIMI PIATTI
   {
-    nome: "Lido ci voleva",
-    section: SectionType.primiPesce,
-    price: "€ 14,00",
+    nome: "Spaghetti carbonara",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiatti,
+    price: "€ 10,00",
     allergens: [],
   },
-  {
-    nome: "Cavatelli cozze patate e polvere di paprika affumicata",
-    section: SectionType.primiPesce,
-    price: "€ 12,00",
-    allergens: [],
-  },
-  {
-    nome: "Scialaltello crema di zucca rossa e gambero rosso locale",
-    section: SectionType.primiPesce,
-    price: "€ 18,00",
-    allergens: [],
-  },
-  {
-    nome: "Spaghetto triglia e finocchietto",
-    section: SectionType.primiPesce,
-    price: "€ 12,00",
-    allergens: [],
-  },
+
   {
     nome: "Spaghetto con ragù di maialino e chenelle di ricotta fresca siciliana",
-    section: SectionType.primiPesce,
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiatti,
     price: "€ 12,00",
     allergens: [],
   },
   {
     nome: "Risotto con crema di zucca rossa, speck croccante e salsa verde",
-    section: SectionType.primiPesce,
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiatti,
     price: "€ 12,00",
     allergens: [],
   },
   {
-    nome: "Pacchero pistacchioso con guanciale, stracciatella di bufala e pesto di pistacchio",
-    section: SectionType.primiPesce,
+    nome: "Paccheri pistacchioso con guanciale, stracciatella di bufala e pesto di pistacchio",
+    section: SectionType.primiPiatti,
+    price: "€ 14,00",
+    allergens: [],
+  },
+  {
+    nome: "Spaghetti cozze",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 12,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
+  },
+  {
+    nome: "Spaghetti cozze e vongole veraci",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 16,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
+  },
+  {
+    nome: "Spaghetti vongole veraci",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 15,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
+  },
+  {
+    nome: "Cavatelli cozze patate e polvere di paprika affumicata",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 13,00",
+    allergens: [],
+  },
+  {
+    nome: "Linguine al nero di seppia",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 15,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
+  },
+  {
+    nome: "Linguine al nero di seppia, tartare di gambero e ricci",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 25,00",
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.molluschi],
+  },
+  {
+    nome: "Spaghettone ai ricci",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 25,00",
+    allergens: [Allergeni.glutine, Allergeni.molluschi],
+  },
+  {
+    nome: "Paccheri gambero rosso, scampi, pesto di pistacchio e stracciatella di bufala",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 22,00",
+    allergens: [Allergeni.glutine, Allergeni.crostacei, Allergeni.fruttaGuscio],
+  },
+  {
+    nome: "Risotto ai frutti di mare",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 15,00",
+    allergens: [Allergeni.crostacei, Allergeni.uova, Allergeni.molluschi],
+  },
+  {
+    nome: "Linguine alla nerano di polpo con zucchina croccante",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Busiata Lido",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 14,00",
+    allergens: [],
+  },
+  {
+    nome: "Scialaltello crema di zucca rossa e gambero rosso locale",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
     price: "€ 16,00",
     allergens: [],
   },
+  {
+    nome: "Spaghetto triglia e finocchietto",
+    section: SectionType.primiPiatti,
+    subSection: SubSectionType.primiPiattiMare,
+    price: "€ 14,00",
+    allergens: [],
+  },
+  // {
+  //   nome: "Linguine all'astice",
+  //   section: SectionType.primiPiatti,
+  //   subSection: SubSectionType.primiPiattiMare,
+  //   price: "€ 25,00",
+  //   allergens: [Allergeni.glutine, Allergeni.crostacei],
+  // },
 
-  //SECONDI DI PESCE
+ 
+
+ 
+
+  //SECONDI 
+  {
+    nome: "Zuppa mediterranea in guazzetto",
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiatti,
+    price: "€ 18,00",
+  },
+  {
+    nome: "Trinca di vitello grill",
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiatti,
+    price: "€ 12,00",
+  },
+  {
+    nome: "Tris di carne",
+    description: "Spiedini, trinca, salsiccia",
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiatti,
+    price: "€ 15,00",
+  },
   
   {
     nome: "Polpo grill su crema di patate alla paprika",
-    section: SectionType.secondiPesce,
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiattiMare,
     price: "€ 14,00",
     allergens: [Allergeni.crostacei],
   },
   {
     nome: "Gamberone rosso di Mazara del Vallo grill 4pz.",
-    section: SectionType.secondiPesce,
-    price: "€ 20,00",
-    allergens: [Allergeni.crostacei],
-  },
-  {
-    nome: "Sautè di gamberone rosso di Mazara del Vallo 4pz.",
-    section: SectionType.secondiPesce,
-    price: "€ 20,00",
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiattiMare,
+    price: "€ 18,00",
     allergens: [Allergeni.crostacei],
   },
   {
     nome: "Pesce spada alla palermitana rivisitato",
-    section: SectionType.secondiPesce,
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiattiMare,
     price: "€ 15,00",
-    allergens: [Allergeni.pesce],
-  },
-  {
-    nome: "Calamaro grill",
-    section: SectionType.secondiPesce,
-    price: "€ 14,00",
     allergens: [Allergeni.pesce],
   },
   {
     nome: "Pesce spada grill",
-    section: SectionType.secondiPesce,
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiattiMare,
+    price: "€ 14,00",
+  },
+  {
+    nome: "Calamaro grill",
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiattiMare,
+    price: "€ 14,00",
+    allergens: [Allergeni.pesce],
+  },
+  {
+    nome: "Orata grill",
+    section: SectionType.secondiPiatti,
+    subSection: SubSectionType.secondiPiattiMare,
     price: "€ 15,00",
+    allergens: [Allergeni.pesce],
   },
-  {
-    nome: "Parmigiana di pesce spada con gel di pomodoro e stracciatella di bufala",
-    section: SectionType.secondiPesce,
-    price: "€ 13,00",
-  },
-  {
-    nome: "Zuppa mediterranea in guazzetto",
-    section: SectionType.secondiPesce,
-    price: "€ 22,00",
-  },
-  {
-    nome: "Orata alla griglia con contorno di patate al forno",
-    section: SectionType.secondiPesce,
-    price: "€ 16,00",
-  },
-  {
-    nome: "Trinca grill",
-    section: SectionType.secondiPesce,
-    price: "€ 18,00",
-  },
-  {
-    nome: "Filetto di manzo grill",
-    section: SectionType.secondiPesce,
-    price: "€ 18,00",
-  },
+  // {
+  //   nome: "Sautè di gamberone rosso di Mazara del Vallo 4pz.",
+  //   section: SectionType.secondiPiatti,
+  //   price: "€ 20,00",
+  //   allergens: [Allergeni.crostacei],
+  // },
+ 
+  
+  // {
+  //   nome: "Parmigiana di pesce spada con gel di pomodoro e stracciatella di bufala",
+  //   section: SectionType.secondiPiatti,
+  //   price: "€ 13,00",
+  // },
+ 
+  // {
+  //   nome: "Orata alla griglia con contorno di patate al forno",
+  //   section: SectionType.secondiPiatti,
+  //   price: "€ 16,00",
+  // },
+ 
   
 
 
@@ -886,6 +984,11 @@ export const menuIta: MenuItem[] = [
     nome: "Messina ai cristalli di sale 50cl.",
      section: SectionType.birre,
      price: "€ 4,00",
+  },
+  {
+    nome: "Messina 33cl.",
+     section: SectionType.birre,
+     price: "€ 4,00 ",
   },
   {
     nome: "Tennent's 33cl.",

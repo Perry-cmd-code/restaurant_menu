@@ -25,12 +25,12 @@ export interface MenuItem {
 export enum SectionTypeEn {
   // antipastiMare = "Seafood starter",
   antipasti = "Starter",
-  primiPesce = "First courses",
-  secondiPesce = "Second courses",
+  primiPiatti = "First courses",
+  secondiPiatti = "Second courses",
   contorni = "Side dishes",
   pizzeria = "Pizzas",
   bibite = "Drinks",
-  birre = "Birre",
+  birre = "Beers",
   vini = "Wines",
   champagne = "Champagne",
   spumanti = "Bubbly wine",
@@ -45,6 +45,15 @@ export enum SubSectionTypeEn {
 
   vinoBiancoJato = "White wines from Tenuto dello Jato",
   vinoRossoJato = "Red wines Tenuto dello Jato",
+
+  antipasti = "Starter",
+  antipastiMare = "Seafood starter",
+
+  primiPiatti = "First courses",
+  primiPiattiMare = "Seafood first courses",
+
+  secondiPiatti = "Second courses",
+  secondiPiattiMare = "Seafood second courses"
 }
 
 export enum AllergeniEn {
@@ -118,43 +127,63 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Portion of french fries",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipasti,
     price: "€ 3,00",
-  },
-  {
-    nome: "Pane pizza bruschetta",
-    section: SectionTypeEn.antipasti,
-    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-    price: "€ 9,00",
-  },
-  {
-    nome: "Classic bruschetta 6pieces.",
-    section: SectionTypeEn.antipasti,
-    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
-    price: "€ 6,00",
   },
   {
     nome: "Antipasto Caldo",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipasti,
     description:
       "French fries, panelle, crocchè, onion rings, meat arancine, butter and ham arancine, mozzarellina in carrozza",
-    price: "€ 7,00",
+    price: "€ 6,00",
   },
-
+  {
+    nome: "Classic bruschetta 6pieces.",
+    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipasti,
+    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
+    price: "€ 6,00",
+  },
+  {
+    nome: "Pane pizza bruschetta",
+    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipasti,
+    description: "Fresh tomato, garlic, basil, oil, salt, pepper, origan",
+    price: "€ 9,00",
+  },
+  {
+    nome: "Sicilian caponata",
+    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipasti,
+    price: "€ 7,00",
+    allergens: [],
+  },
   {
     nome: "Mussel soup",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 10,00",
+    allergens: [AllergeniEn.molluschi],
+  },
+  {
+    nome: "Peppered Mussels",
+    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
+    price: "€ 8,00",
     allergens: [AllergeniEn.molluschi],
   },
   {
     nome: "Shellfish sauté",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 14,00",
     allergens: [AllergeniEn.molluschi],
   },
   {
     nome: "Sea salad",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 15,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.molluschi],
   },
@@ -162,30 +191,35 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Prawn tartare",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 20,00",
     allergens: [AllergeniEn.crostacei],
   },
   {
     nome: "Marinated red shrimps from Mazara del Vallo 4pieces",
     section: SectionTypeEn.antipasti,
-    price: "€ 20,00",
+    subSection: SubSectionTypeEn.antipastiMare,
+    price: "€ 18,00",
     allergens: [AllergeniEn.crostacei],
   },
   {
     nome: "Bruschetta with urchins 4pieces",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 20,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
     nome: "Oyster 1piece",
     section: SectionTypeEn.antipasti,
-    price: "€ 3,00",
+    subSection: SubSectionTypeEn.antipastiMare,
+    price: "€ 3,50",
     allergens: [AllergeniEn.molluschi],
   },
   {
     nome: "Cruditè x2",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 40,00",
     allergens: [
       AllergeniEn.crostacei,
@@ -198,6 +232,7 @@ export const menuEnglish: MenuItem[] = [
     nome: "Frittura!",
     description: "Fried squid, baby squid and prawn",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 15,00",
     allergens: [
       AllergeniEn.crostacei,
@@ -208,7 +243,8 @@ export const menuEnglish: MenuItem[] = [
   {
     nome: "Prawn cocktail",
     section: SectionTypeEn.antipasti,
-    price: "€ 12,00",
+    subSection: SubSectionTypeEn.antipastiMare,
+    price: "€ 10,00",
     allergens: [],
   },
   {
@@ -217,54 +253,107 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 18,00",
     allergens: [],
   },
-  {
-    nome: "Catalan-style octopus on potato cream, sweet and sour onion and confit cherry tomato",
-    section: SectionTypeEn.antipasti,
-    price: "€ 13,00",
-    allergens: [],
-  },
+
   {
     nome: "Fried cod",
     section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 10,00",
     allergens: [],
   },
   {
     nome: "Swordfish caponata",
     section: SectionTypeEn.antipasti,
-    price: "€ 10,00",
-    allergens: [],
-  },
-  {
-    nome: "Sicilian caponata",
-    section: SectionTypeEn.antipasti,
-    price: "€ 7,00",
-    allergens: [],
-  },
-  {
-    nome: "Beccafico sardines with Sicilian citrus fruit gel 5pieces",
-    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 10,00",
     allergens: [],
   },
 
-  
+  {
+    nome: "Beccafico sardines with Sicilian citrus fruit gel 5pieces",
+    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
+    price: "€ 7,00",
+    allergens: [],
+  },
+  {
+    nome: "Catalan-style octopus on potato cream, sweet and sour onion and confit cherry tomato",
+    section: SectionTypeEn.antipasti,
+    subSection: SubSectionTypeEn.antipastiMare,
+    price: "€ 13,00",
+    allergens: [],
+  },
+
+
   //PRIMI PIATTI MARE
   {
+    nome: "Spaghetti carbonara",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiatti,
+    price: "€ 10,00",
+    allergens: [],
+  },
+
+  {
+    nome: "Spaghetti with pork ragout and fresh Sicilian ricotta chenelle",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiatti,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Risotto with red pumpkin cream, crunchy speck and green sauce",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiatti,
+    price: "€ 12,00",
+    allergens: [],
+  },
+  {
+    nome: "Paccheri with bacon, buffalo stracciatella and pistachio pesto",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiatti,
+    price: "€ 14,00",
+    allergens: [],
+  },
+  {
+    nome: "Spaghetti mussels",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
+    price: "€ 12,00",
+    allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
+  },
+  {
+    nome: "Spaghetti mussels and clams",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
+    price: "€ 16,00",
+    allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
+  },
+  {
     nome: "Spaghetti with clams",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 15,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
+    nome: "Cavatelli mussels, potatoes and smoked paprika powder",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
+    price: "€ 13,00",
+    allergens: [],
+  },
+  {
     nome: "Linguine with cuttlefish ink",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 15,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
     nome: "Linguine with cuttlefish ink, shrimps tartare and sea urchins",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 25,00",
     allergens: [
       AllergeniEn.glutine,
@@ -272,21 +361,23 @@ export const menuEnglish: MenuItem[] = [
       AllergeniEn.molluschi,
     ],
   },
-  {
-    nome: "Linguine with red lobster",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 25,00",
-    allergens: [AllergeniEn.glutine, AllergeniEn.crostacei],
-  },
+  // {
+  //   nome: "Linguine with red lobster",
+  //   section: SectionTypeEn.primiPiatti,
+  //   price: "€ 25,00",
+  //   allergens: [AllergeniEn.glutine, AllergeniEn.crostacei],
+  // },
   {
     nome: "Spaghettone with sea urchins",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 25,00",
     allergens: [AllergeniEn.glutine, AllergeniEn.molluschi],
   },
   {
     nome: "Paccheri red shrimp, scampi, pistachio pesto and buffalo stracciatella ",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 22,00",
     allergens: [
       AllergeniEn.glutine,
@@ -296,120 +387,120 @@ export const menuEnglish: MenuItem[] = [
   },
   {
     nome: "Risotto with seafood",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 15,00",
     allergens: [AllergeniEn.crostacei, AllergeniEn.uova, AllergeniEn.molluschi],
   },
   {
     nome: "Octopus linguine with crunchy courgettee",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 13,00",
-    allergens: [],
-  },
-  {
-    nome: "Lido ci voleva",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 14,00",
-    allergens: [],
-  },
-  {
-    nome: "Cavatelli mussels, potatoes and smoked paprika powder",
-    section: SectionTypeEn.primiPesce,
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
     price: "€ 12,00",
     allergens: [],
   },
   {
+    nome: "Busiata Lido",
+    section: SectionTypeEn.primiPiatti,
+    price: "€ 14,00",
+    allergens: [],
+  },
+
+  {
     nome: "Scialaltello cream of red pumpkin and local red prawn",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 18,00",
+    section: SectionTypeEn.primiPiatti,
+    price: "€ 16,00",
     allergens: [],
   },
   {
     nome: "Spaghetti red mullet and fennel",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 12,00",
-    allergens: [],
-  },
-  {
-    nome: "Spaghetti with pork ragout and fresh Sicilian ricotta chenelle",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 12,00",
-    allergens: [],
-  },
-  {
-    nome: "Risotto with red pumpkin cream, crunchy speck and green sauce",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 12,00",
-    allergens: [],
-  },
-  {
-    nome: "Pacchero with bacon, buffalo stracciatella and pistachio pesto",
-    section: SectionTypeEn.primiPesce,
-    price: "€ 16,00",
+    section: SectionTypeEn.primiPiatti,
+    subSection: SubSectionTypeEn.primiPiattiMare,
+    price: "€ 14,00",
     allergens: [],
   },
 
-  //SECONDI DI PESCE
+  //SECONDI 
+  {
+    nome: "Mediterranean stew soup",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiatti,
+    price: "€ 18,00",
+  },
+  {
+    nome: "Grilled veal trinch",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiatti,
+    price: "€ 12,00",
+  },
+  {
+    nome: "Trio of meat",
+    description: "Skewers, trinch, sausage",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiatti,
+    price: "€ 15,00",
+  },
   {
     nome: "Grilled octopus on paprika potato cream",
-    section: SectionTypeEn.secondiPesce,
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiattiMare,
     price: "€ 14,00",
     allergens: [AllergeniEn.latte, AllergeniEn.sedano, AllergeniEn.molluschi],
   },
   {
     nome: "Grilled red shrimp from Mazara del Vallo 4 pieces",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 20,00",
-    allergens: [AllergeniEn.crostacei],
-  },
-  {
-    nome: "Red prawn sauté from Mazara del Vallo 4 pieces",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 20,00",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiattiMare,
+    price: "€ 18,00",
     allergens: [AllergeniEn.crostacei],
   },
   {
     nome: "Palermo-style swordfish revisited",
-    section: SectionTypeEn.secondiPesce,
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiattiMare,
     price: "€ 15,00",
     allergens: [AllergeniEn.pesce],
   },
   {
-    nome: "Grilled squid",
-    section: SectionTypeEn.secondiPesce,
+    nome: "Grilled swordfish",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiattiMare,
     price: "€ 14,00",
   },
   {
-    nome: "Grilled swordfish",
-    section: SectionTypeEn.secondiPesce,
+    nome: "Grilled squid",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiattiMare,
+    price: "€ 14,00",
+  },
+  {
+    nome: "Grilled sea bream",
+    section: SectionTypeEn.secondiPiatti,
+    subSection: SubSectionTypeEn.secondiPiattiMare,
     price: "€ 15,00",
   },
-  {
-    nome: "Swordfish parmigiana with tomato gel and buffalo stracciatella",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 13,00",
-  },
-  {
-    nome: "Mediterranean stew soup",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 22,00",
-  },
-  {
-    nome: "Grilled sea bream with a side of baked potatoes",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 16,00",
-  },
-  {
-    nome: "Grilled trinch",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 18,00",
-  },
-  {
-    nome: "Grilled beef fillet",
-    section: SectionTypeEn.secondiPesce,
-    price: "€ 18,00",
-  },
-  
+  // {
+  //   nome: "Red prawn sauté from Mazara del Vallo 4 pieces",
+  //   section: SectionTypeEn.secondiPiatti,
+  //   price: "€ 20,00",
+  //   allergens: [AllergeniEn.crostacei],
+  // },
+
+
+
+  // {
+  //   nome: "Swordfish parmigiana with tomato gel and buffalo stracciatella",
+  //   section: SectionTypeEn.secondiPiatti,
+  //   price: "€ 13,00",
+  // },
+
+  // {
+  //   nome: "Grilled sea bream with a side of baked potatoes",
+  //   section: SectionTypeEn.secondiPiatti,
+  //   price: "€ 16,00",
+  // },
+
+
 
 
   //CONTORNI
@@ -894,6 +985,11 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 4,00",
   },
   {
+    nome: "Messina 33cl.",
+    section: SectionTypeEn.birre,
+    price: "€ 4,00 ",
+  },
+  {
     nome: "Tennent's 33cl.",
     section: SectionTypeEn.birre,
     price: "€ 4,00",
@@ -914,19 +1010,19 @@ export const menuEnglish: MenuItem[] = [
     section: SectionTypeEn.birre,
     price: "€ 3,50",
   },
-  
+
   {
     nome: "Heineken 66cl.",
     section: SectionTypeEn.birre,
     price: "€ 4,00",
   },
-  
+
   {
     nome: "Beck's 66cl.",
     section: SectionTypeEn.birre,
     price: "€ 4,00",
   },
-  
+
   {
     nome: "Moretti 33cl.",
     section: SectionTypeEn.birre,
@@ -937,7 +1033,7 @@ export const menuEnglish: MenuItem[] = [
     section: SectionTypeEn.birre,
     price: "€ 3,00",
   },
-  
+
   {
     nome: "Beck's 3cl.",
     section: SectionTypeEn.birre,
