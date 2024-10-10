@@ -201,7 +201,7 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.crostacei],
   },
   {
-    nome: "Gamberone rosso marinato di Mazara del Vallo 4pz.",
+    nome: "Gamberone rosso marinato di Mazara del Vallo",
     section: SectionType.antipasti,
     subSection: SubSectionType.antipastiMare,
     price: "€ 18,00",
@@ -266,7 +266,7 @@ export const menuIta: MenuItem[] = [
   },
  
   {
-    nome: "Sarde a beccafico con gel di agrumi siciliani 5pz.",
+    nome: "Sarde a beccafico con gel di agrumi siciliani",
     section: SectionType.antipasti,
     subSection: SubSectionType.antipastiMare,
     price: "€ 7,00",
@@ -301,7 +301,7 @@ export const menuIta: MenuItem[] = [
     allergens: [],
   },
   {
-    nome: "Risotto con crema di zucca rossa, speck croccante e salsa verde",
+    nome: "Risotto con crema di zucca rossa, speck croccante e salsa di basilico",
     section: SectionType.primiPiatti,
     subSection: SubSectionType.primiPiatti,
     price: "€ 12,00",
@@ -391,7 +391,7 @@ export const menuIta: MenuItem[] = [
     allergens: [],
   },
   {
-    nome: "Scialaltello crema di zucca rossa e gambero rosso locale",
+    nome: "Scialatiello crema di zucca rossa e gambero rosso di Mazara del Vallo",
     section: SectionType.primiPiatti,
     subSection: SubSectionType.primiPiattiMare,
     price: "€ 16,00",
@@ -445,7 +445,7 @@ export const menuIta: MenuItem[] = [
     allergens: [Allergeni.crostacei],
   },
   {
-    nome: "Gamberone rosso di Mazara del Vallo grill 4pz.",
+    nome: "Gamberone rosso di Mazara del Vallo grill",
     section: SectionType.secondiPiatti,
     subSection: SubSectionType.secondiPiattiMare,
     price: "€ 18,00",
@@ -475,7 +475,7 @@ export const menuIta: MenuItem[] = [
     nome: "Orata grill",
     section: SectionType.secondiPiatti,
     subSection: SubSectionType.secondiPiattiMare,
-    price: "€ 15,00",
+    price: "€ 20,00",
     allergens: [Allergeni.pesce],
   },
   // {
@@ -981,15 +981,15 @@ export const menuIta: MenuItem[] = [
      price: "€ 5,00",
   },
    {
-    nome: "Messina ai cristalli di sale 50cl.",
+    nome: "Messina ai cristalli di sale 33cl.",
      section: SectionType.birre,
      price: "€ 4,00",
   },
-  {
-    nome: "Messina 33cl.",
-     section: SectionType.birre,
-     price: "€ 4,00 ",
-  },
+  // {
+  //   nome: "Messina 33cl.",
+  //    section: SectionType.birre,
+  //    price: "€ 4,00 ",
+  // },
   {
     nome: "Tennent's 33cl.",
     section: SectionType.birre,

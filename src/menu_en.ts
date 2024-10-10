@@ -196,7 +196,7 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.crostacei],
   },
   {
-    nome: "Marinated red shrimps from Mazara del Vallo 4pieces",
+    nome: "Marinated red shrimps from Mazara del Vallo",
     section: SectionTypeEn.antipasti,
     subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 18,00",
@@ -270,7 +270,7 @@ export const menuEnglish: MenuItem[] = [
   },
 
   {
-    nome: "Beccafico sardines with Sicilian citrus fruit gel 5pieces",
+    nome: "Beccafico sardines with Sicilian citrus fruit gel",
     section: SectionTypeEn.antipasti,
     subSection: SubSectionTypeEn.antipastiMare,
     price: "€ 7,00",
@@ -302,14 +302,14 @@ export const menuEnglish: MenuItem[] = [
     allergens: [],
   },
   {
-    nome: "Risotto with red pumpkin cream, crunchy speck and green sauce",
+    nome: "Risotto with red pumpkin cream, crunchy speck and basil sauce",
     section: SectionTypeEn.primiPiatti,
     subSection: SubSectionTypeEn.primiPiatti,
     price: "€ 12,00",
     allergens: [],
   },
   {
-    nome: "Paccheri with bacon, buffalo stracciatella and pistachio pesto",
+    nome: "Paccheri pistacchioso with bacon, buffalo stracciatella and pistachio pesto",
     section: SectionTypeEn.primiPiatti,
     subSection: SubSectionTypeEn.primiPiatti,
     price: "€ 14,00",
@@ -407,7 +407,7 @@ export const menuEnglish: MenuItem[] = [
   },
 
   {
-    nome: "Scialaltello cream of red pumpkin and local red prawn",
+    nome: "Scialatiello cream of red pumpkin and red prawn from Mazara del Vallo",
     section: SectionTypeEn.primiPiatti,
     price: "€ 16,00",
     allergens: [],
@@ -448,7 +448,7 @@ export const menuEnglish: MenuItem[] = [
     allergens: [AllergeniEn.latte, AllergeniEn.sedano, AllergeniEn.molluschi],
   },
   {
-    nome: "Grilled red shrimp from Mazara del Vallo 4 pieces",
+    nome: "Grilled red shrimp from Mazara del Vallo",
     section: SectionTypeEn.secondiPiatti,
     subSection: SubSectionTypeEn.secondiPiattiMare,
     price: "€ 18,00",
@@ -477,7 +477,7 @@ export const menuEnglish: MenuItem[] = [
     nome: "Grilled sea bream",
     section: SectionTypeEn.secondiPiatti,
     subSection: SubSectionTypeEn.secondiPiattiMare,
-    price: "€ 15,00",
+    price: "€ 20,00",
   },
   // {
   //   nome: "Red prawn sauté from Mazara del Vallo 4 pieces",
@@ -980,15 +980,15 @@ export const menuEnglish: MenuItem[] = [
     price: "€ 5,00",
   },
   {
-    nome: "Messina to salt crystals 50cl.",
+    nome: "Messina to salt crystals 33cl.",
     section: SectionTypeEn.birre,
     price: "€ 4,00",
   },
-  {
-    nome: "Messina 33cl.",
-    section: SectionTypeEn.birre,
-    price: "€ 4,00 ",
-  },
+  // {
+  //   nome: "Messina 33cl.",
+  //   section: SectionTypeEn.birre,
+  //   price: "€ 4,00 ",
+  // },
   {
     nome: "Tennent's 33cl.",
     section: SectionTypeEn.birre,
